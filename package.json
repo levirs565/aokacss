@@ -1,0 +1,23 @@
+{
+  "name": "aokacss",
+  "version": "0.1.0",
+  "description": "Simple Material Design CSS Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "Levi Rizki Saputra",
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^7.0.24",
+    "postcss-nested": "^4.2.1",
+    "tailwindcss": "^1.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@storybook/html": "^5.2.8",
+    "babel-loader": "^8.0.6"
+  }
+}
