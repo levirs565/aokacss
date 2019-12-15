@@ -1,7 +1,6 @@
 module.exports = {
-  theme: {
-    extend: {}
-  },
+  important: true,
+  theme: require('./theme'),
   variants: {},
-  plugins: [require('./src/util/elevation')]
+  plugins: require('./plugin')
 };
