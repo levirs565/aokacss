@@ -9,26 +9,29 @@ module.exports = function({ addUtilities }) {
     content: '""',
 
     '&-surface': {
-      backgroundColor: 'var(--surface)'
+      backgroundColor: 'var(--surface)',
+      '--overlay-hover': 'var(--overlay-surface-hover)',
+      '--overlay-focus': 'var(--overlay-surface-focus)',
+      '--overlay-press': 'var(--overlay-surface-press)'
     },
 
-    '&-surface-hover': {
-      opacity: 'var(--overlay-surface-hover)'
-    },
-
-    '&-surface-focus': {
-      opacity: 'var(--overlay-surface-focus)'
-    },
     '&-ink': {
-      backgroundColor: 'var(--overlay-ink)'
+      backgroundColor: 'var(--overlay-ink)',
+      '--overlay-hover': 'var(--overlay-ink-hover)',
+      '--overlay-focus': 'var(--overlay-ink-focus)',
+      '--overlay-press': 'var(--overlay-ink-press)'
     },
 
-    '&-ink-hover': {
-      opacity: 'var(--overlay-ink-hover)'
+    '&-hover': {
+      opacity: 'var(--overlay-hover)'
     },
 
-    '&-ink-focus': {
-      opacity: 'var(--overlay-ink-focus)'
+    '&-focus': {
+      opacity: 'var(--overlay-focus)'
+    },
+
+    '&-press': {
+      opacity: 'var(--overlay-press)'
     }
   };
 
