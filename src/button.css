@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+
+.ao-button {
+  @apply h-36 min-w-64 my-8;
+  @apply inline-flex flex-row justify-center items-center relative;
+  @apply rounded-4 border-none;
+  @apply font-roboto font-medium uppercase text-sm;
+  @apply ao-color-gray outline-none;
+
+  &:enabled {
+    &::after {
+      @apply ao-overlay;
+    }
+
+    &:hover::after {
+      @apply ao-overlay-hover;
+    }
+
+    &:active::after {
+      @apply ao-overlay-press;
+    }
+
+    &:focus {
+      @apply outline-none;
+
+      &::after {
+        @apply ao-overlay-focus;
+      }
+    }
+  }
+
+  &&-raised,
+  &&-unelevated,
+  &&-outlined {
+    @apply px-16;
+
+    & > .ao-icons {
+      margin-left: -0.25rem;
+    }
+  }
+
+  &&-raised,
+  &&-unelevated {
+    @apply bg-surface text-ink;
+
+    &:disabled {
+      @apply bg-gray-300 text-gray-500;
+    }
+
+    &:enabled {
+      &::after {
+        @apply ao-overlay-ink;
+      }
+    }
+  }
+
+  &&-raised:enabled {
+    @apply ao-elevation-2;
+
+    &:hover {
+      @apply ao-elevation-4;
+    }
+
+    &:active {
+      @apply ao-elevation-8;
+    }
+  }
+
+  &&-text,
+  &&-outlined {
+    @apply bg-transparent text-surface;
+
+    &:disabled {
+      @apply text-gray-500;
+    }
+
+    &:enabled {
+      &::after {
+        @apply ao-overlay-surface;
+      }
+    }
+  }
+
+  &&-text {
+    @apply px-8;
+  }
+
+  &&-outlined {
+    @apply border-surface border border-solid;
+
+    &:disabled {
+      @apply border-gray-500;
+    }
+  }
+
+  & > .ao-icons {
+    @apply text-lg;
+  }
+
+  & > .ao-icons + span {
+    @apply ml-8;
+  }
+}
