@@ -1,0 +1,72 @@
+.ao-check {
+  @apply relative select-none h-40 flex items-center ao-color-gray;
+  padding: 10px;
+
+  & > input {
+    @apply w-20 h-20 left-0 top-0;
+    @apply border-2 border-solid border-surface;
+    @apply cursor-pointer;
+    appearance: none;
+    border-radius: 2px;
+
+    &:disabled {
+      @apply ao-color-gray;
+      opacity: 0.38;
+
+      &:checked {
+        @apply bg-gray-900 border-gray-900;
+      }
+
+      & + label {
+        color: rgba(0, 0, 0, 0.38);
+
+        &::after {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &:checked {
+      @apply ao-color-red bg-surface;
+
+      & + label {
+        @apply ao-color-red;
+      }
+    }
+
+    &:focus {
+      @apply outline-none;
+
+      & + label::after {
+        @apply ao-overlay-focus;
+      }
+    }
+
+    &:hover:not(:focus):not(:active) + label::after {
+      @apply ao-overlay-hover;
+    }
+
+    &:active + label::after {
+      @apply ao-overlay-press;
+    }
+  }
+
+  & > label {
+    @apply p-16;
+
+    &::before {
+      @apply absolute inline-block left-0 top-0 cursor-pointer w-20 h-20 text-ink;
+      @apply font-medium;
+      font-family: 'Material Icons';
+      content: 'check';
+      margin: 10px;
+      font-size: 20px;
+      line-height: 1;
+      border-radius: 2px;
+    }
+
+    &::after {
+      @apply ao-overlay ao-overlay-surface rounded-full left-0 top-0 w-40 h-40;
+    }
+  }
+}
