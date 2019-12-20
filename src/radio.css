@@ -9,10 +9,19 @@
     appearance: none;
 
     &:disabled {
+      @apply border-gray-900;
       opacity: 0.38;
 
+      &:checked + label::before {
+        @apply bg-gray-900;
+      }
+
       & + label {
-        opacity: 0.38;
+        color: rgba(0, 0, 0, 0.38);
+
+        &::before {
+          opacity: 0.38;
+        }
 
         &::after {
           background-color: transparent;

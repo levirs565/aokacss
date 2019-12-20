@@ -19,6 +19,10 @@ export const radio = () => {
           <input type="radio" id="Three" name="choice" disabled>
           <label for="Three">Three</label>
         </div>
+        <div class="ao-radio">
+          <input type="radio" id="Four" name="choice" disabled checked>
+          <label for="Four">Four</label>
+        </div>
     </form>`
   )({
     option: ['One', 'Two']
