@@ -1,0 +1,67 @@
+.ao-radio {
+  @apply relative select-none h-40 flex items-center ao-color-gray;
+  padding: 10px;
+
+  & > input {
+    @apply w-20 h-20 left-0 top-0;
+    @apply border-2 border-solid border-surface rounded-full;
+    @apply cursor-pointer;
+    appearance: none;
+
+    &:disabled {
+      opacity: 0.38;
+
+      & + label {
+        opacity: 0.38;
+
+        &::after {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &:checked {
+      @apply ao-color-red;
+
+      & + label {
+        @apply ao-color-red;
+      }
+
+      & + label::before {
+        @apply bg-surface;
+      }
+    }
+
+    &:focus {
+      @apply outline-none;
+
+      & + label::after {
+        @apply ao-overlay-focus;
+      }
+    }
+
+    &:hover:not(:focus):not(:active) + label::after {
+      @apply ao-overlay-hover;
+    }
+
+    &:active + label::after {
+      @apply ao-overlay-press;
+    }
+  }
+
+  & > label {
+    @apply p-16;
+
+    &::before {
+      @apply absolute inline-block rounded-full left-0 top-0 cursor-pointer;
+      content: '';
+      width: 10px;
+      height: 10px;
+      margin: 15px;
+    }
+
+    &::after {
+      @apply ao-overlay ao-overlay-surface rounded-full left-0 top-0 w-40 h-40;
+    }
+  }
+}
