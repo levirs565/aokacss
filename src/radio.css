@@ -4,24 +4,17 @@
 
   & > input {
     @apply w-20 h-20 left-0 top-0;
-    @apply border-2 border-solid border-surface rounded-full;
+    @apply border-2 border-solid border-surface bg-transparent rounded-full;
     @apply cursor-pointer;
+    background-clip: content-box;
     appearance: none;
+    padding: 3px;
 
     &:disabled {
-      @apply border-gray-900;
       opacity: 0.38;
 
-      &:checked + label::before {
-        @apply bg-gray-900;
-      }
-
       & + label {
-        color: rgba(0, 0, 0, 0.38);
-
-        &::before {
-          opacity: 0.38;
-        }
+        opacity: 0.38;
 
         &::after {
           background-color: transparent;
@@ -30,14 +23,14 @@
     }
 
     &:checked {
-      @apply ao-color-red;
+      @apply bg-surface;
 
-      & + label {
+      &:enabled {
         @apply ao-color-red;
-      }
 
-      & + label::before {
-        @apply bg-surface;
+        & + label {
+          @apply ao-color-red;
+        }
       }
     }
 
@@ -61,16 +54,9 @@
   & > label {
     @apply p-16;
 
-    &::before {
-      @apply absolute inline-block rounded-full left-0 top-0 cursor-pointer;
-      content: '';
-      width: 10px;
-      height: 10px;
-      margin: 15px;
-    }
-
     &::after {
-      @apply ao-overlay ao-overlay-surface rounded-full left-0 top-0 w-40 h-40;
+      @apply ao-overlay ao-overlay-surface rounded-full;
+      @apply left-0 top-0 w-40 h-40;
     }
   }
 }
