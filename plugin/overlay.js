@@ -2,10 +2,9 @@ module.exports = function({ addUtilities }) {
   const utilities = {
     opacity: '0',
     position: 'absolute',
-    width: '100%',
-    height: '100%',
     top: '0',
     left: '0',
+    pointerEvents: 'none',
     content: '""',
 
     '&-surface': {
