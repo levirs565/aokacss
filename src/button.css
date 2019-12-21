@@ -9,7 +9,7 @@
 
   &:enabled {
     &::after {
-      @apply ao-overlay;
+      @apply ao-overlay w-full h-full;
     }
 
     &:hover::after {
