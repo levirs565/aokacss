@@ -11,35 +11,27 @@
     padding: 3px;
 
     &:disabled {
-      opacity: 0.38;
-
+      &,
       & + label {
         opacity: 0.38;
+      }
 
-        &::after {
-          background-color: transparent;
-        }
+      & + label::after {
+        background-color: transparent;
       }
     }
 
     &:checked {
       @apply bg-surface;
 
-      &:enabled {
+      &:enabled,
+      &:enabled + label {
         @apply ao-color-red;
-
-        & + label {
-          @apply ao-color-red;
-        }
       }
     }
 
-    &:focus {
-      @apply outline-none;
-
-      & + label::after {
-        @apply ao-overlay-focus;
-      }
+    &:focus + label::after {
+      @apply ao-overlay-focus;
     }
 
     &:hover:not(:focus):not(:active) + label::after {
@@ -52,7 +44,7 @@
   }
 
   & > label {
-    @apply p-16;
+    @apply px-16 cursor-pointer;
 
     &::after {
       @apply ao-overlay ao-overlay-surface rounded-full;
