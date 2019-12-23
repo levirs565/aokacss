@@ -1,3 +1,29 @@
+const darkInkOpacities = {
+  hover: 0.04,
+  focus: 0.12,
+  press: 0.12,
+  selected: 0.08,
+  activated: 0.12
+};
+
+const lightInkOpacities = {
+  hover: 0.08,
+  focus: 0.24,
+  press: 0.24,
+  selected: 0.16,
+  activated: 0.24
+};
+
+function convertOpactities(opacities) {
+  const result = {};
+
+  for (state in opacities) {
+    result[`--overlay-${state}`] = `${opacities[state]}`;
+  }
+
+  return result;
+}
+
 module.exports = function({ addUtilities }) {
   const utilities = {
     opacity: '0',
@@ -7,20 +33,13 @@ module.exports = function({ addUtilities }) {
     pointerEvents: 'none',
     content: '""',
 
-    '&-surface': {
-      backgroundColor: 'var(--surface)',
-      '--overlay-hover': 'var(--overlay-surface-hover)',
-      '--overlay-focus': 'var(--overlay-surface-focus)',
-      '--overlay-press': 'var(--overlay-surface-press)'
+    '&-dark': {
+      ...convertOpactities(darkInkOpacities)
     },
 
-    '&-ink': {
-      backgroundColor: 'var(--overlay-ink)',
-      '--overlay-hover': 'var(--overlay-ink-hover)',
-      '--overlay-focus': 'var(--overlay-ink-focus)',
-      '--overlay-press': 'var(--overlay-ink-press)'
+    '&-light': {
+      ...convertOpactities(lightInkOpacities)
     },
-
     '&-hover': {
       opacity: 'var(--overlay-hover)'
     },

@@ -11,6 +11,7 @@
   "author": "Levi Rizki Saputra",
   "license": "MIT",
   "dependencies": {
+    "parse-color": "^1.0.0",
     "postcss": "^7.0.24",
     "postcss-nested": "^4.2.1",
     "tailwindcss": "^1.1.4"
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@storybook/html": "^5.2.8",
-    "babel-loader": "^8.0.6"
+    "babel-loader": "^8.0.6",
+    "handlebars": "^4.5.3"
   }
 }

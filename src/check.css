@@ -1,5 +1,5 @@
 .ao-check {
-  @apply relative select-none h-40 flex items-center ao-color-gray;
+  @apply relative select-none h-40 flex items-center;
   padding: 10px;
 
   & > input,
@@ -8,7 +8,8 @@
   }
 
   & > input {
-    @apply border-2 border-solid border-surface appearance-none;
+    @apply border-2 border-solid appearance-none;
+    border-color: theme('colors.primary.default');
     border-radius: 2px;
 
     &:disabled {
@@ -25,9 +26,12 @@
     &:checked {
       @apply bg-surface;
 
-      &:enabled,
-      &:enabled + label {
-        @apply ao-color-red;
+      &:enabled {
+        background-color: theme('colors.primary.default');
+      }
+
+      &:enabled + label::before {
+        color: theme('colors.primary.text.default');
       }
     }
 
@@ -48,14 +52,14 @@
     @apply px-16 cursor-pointer;
 
     &::before {
-      @apply absolute text-ink ao-icon;
+      @apply absolute text-ink ao-icon text-transparent;
       content: 'check';
       margin: 10px;
       font-size: 20px;
     }
 
     &::after {
-      @apply ao-overlay ao-overlay-surface rounded-full w-40 h-40;
+      @apply ao-overlay rounded-full w-40 h-40;
     }
   }
 }

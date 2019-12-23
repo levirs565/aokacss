@@ -1,22 +1,23 @@
 .ao-text-field {
-  @apply relative select-none h-56 ao-color-blue;
+  @apply relative select-none h-56 m-8;
   width: 280px;
 
   & > input,
   & > label > span {
     @apply absolute px-12 font-roboto text-base pt-4;
-    color: #00000099;
+    color: theme('colors.surface.text.inactive');
     transition: all 0.3s ease;
   }
 
   & > input {
-    @apply w-full h-full pt-20 pb-8;
-    @apply rounded-4 bg-gray-50 border-b border-gray-500 border-solid;
+    @apply w-full h-full pt-20 pb-4;
+    @apply rounded-4 bg-gray-50 border-b border-solid;
+    border-bottom-color: theme('colors.surface.text.disabled');
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
 
     &:hover {
-      @apply border-black;
+      border-bottom-color: theme('colors.surface.text.default');
 
       & + label::after {
         @apply ao-overlay-hover;
@@ -24,8 +25,9 @@
     }
 
     &:focus {
-      @apply border-surface;
-      box-shadow: 0 1px 0 0 theme('colors.surface');
+      border-bottom-color: theme('colors.primary.default');
+      box-shadow: 0 1px 0 0 theme('colors.primary.default');
+      color: theme('colors.surface.text.default');
 
       & + label::after {
         @apply ao-overlay-focus;
@@ -35,15 +37,19 @@
     &:focus + label > span,
     &:valid + label > span {
       @apply text-xs;
-      transform: translateY(-125%);
+      transform: translateY(-110%);
     }
 
     &:focus + label > span {
-      @apply text-surface;
+      color: theme('colors.primary.default');
     }
 
-    &:invalid {
-      outline: none !important;
+    &:invalid:not(:focus) {
+      box-shadow: none;
+    }
+
+    &:disabled {
+      color: theme('colors.surface.text.disabled');
     }
   }
 
@@ -57,8 +63,8 @@
     }
 
     &::after {
-      @apply ao-overlay ao-overlay-surface w-full h-full;
-      background-color: #000000;
+      @apply ao-overlay ao-overlay-dark w-full h-full;
+      background-color: theme('colors.surface.text.default');
     }
   }
 }

@@ -5,11 +5,11 @@
   @apply inline-flex flex-row justify-center items-center relative;
   @apply rounded-4 border-none;
   @apply font-roboto font-medium uppercase text-sm;
-  @apply ao-color-gray outline-none;
+  @apply outline-none;
 
   &:enabled {
     &::after {
-      @apply ao-overlay w-full h-full;
+      @apply ao-overlay ao-overlay-dark w-full h-full;
     }
 
     &:hover::after {
@@ -41,15 +41,18 @@
 
   &&-raised,
   &&-unelevated {
-    @apply bg-surface text-ink;
+    background-color: theme('colors.primary.default');
+    color: theme('colors.primary.text.default');
 
     &:disabled {
-      @apply bg-gray-300 text-gray-500;
+      background-color: theme('colors.surface.text.disabled');
+      color: theme('colors.surface.text.disabled');
     }
 
     &:enabled {
       &::after {
-        @apply ao-overlay-ink;
+        @apply ao-overlay-light;
+        background-color: theme('colors.primary.text.default');
       }
     }
   }
@@ -68,15 +71,17 @@
 
   &&-text,
   &&-outlined {
-    @apply bg-transparent text-surface;
+    @apply bg-transparent;
+    color: theme('colors.primary.default');
 
     &:disabled {
-      @apply text-gray-500;
+      color: theme('colors.surface.text.disabled');
     }
 
     &:enabled {
       &::after {
-        @apply ao-overlay-surface;
+        @apply ao-overlay-dark;
+        background-color: theme('colors.primary.default');
       }
     }
   }
@@ -86,10 +91,11 @@
   }
 
   &&-outlined {
-    @apply border-surface border border-solid;
+    @apply border border-solid;
+    border-color: theme('colors.primary.default');
 
     &:disabled {
-      @apply border-gray-500;
+      border-color: theme('colors.surface.text.disabled');
     }
   }
 

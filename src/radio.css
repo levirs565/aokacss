@@ -1,11 +1,12 @@
 .ao-radio {
-  @apply relative select-none h-40 flex items-center ao-color-gray;
+  @apply relative select-none h-40 flex items-center;
   padding: 10px;
 
   & > input {
     @apply w-20 h-20 left-0 top-0;
     @apply border-2 border-solid border-surface bg-transparent rounded-full;
     @apply cursor-pointer;
+    border-color: theme('colors.surface.text.inactive');
     background-clip: content-box;
     appearance: none;
     padding: 3px;
@@ -25,8 +26,12 @@
       @apply bg-surface;
 
       &:enabled,
-      &:enabled + label {
-        @apply ao-color-red;
+      &:enabled + label::after {
+        background-color: theme('colors.primary.default');
+      }
+
+      &:enabled {
+        border-color: theme('colors.primary.default');
       }
     }
 
@@ -47,8 +52,9 @@
     @apply px-16 cursor-pointer;
 
     &::after {
-      @apply ao-overlay ao-overlay-surface rounded-full;
+      @apply ao-overlay ao-overlay-dark rounded-full;
       @apply left-0 top-0 w-40 h-40;
+      background-color: theme('colors.surface.text.inactive');
     }
   }
 }

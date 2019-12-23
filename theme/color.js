@@ -291,10 +291,33 @@ module.exports = {
     '800': '#37474F',
     '900': '#263238'
   },
-
+  background: {
+    default: '#ffffff',
+    text: {
+      default: '#000000df',
+      inactive: '#00000098',
+      disabled: '#00000060'
+    }
+  },
+  surface: {
+    default: '#ffffff',
+    text: {
+      default: '#000000df',
+      inactive: '#00000098',
+      disabled: '#00000060'
+    }
+  },
+  primary: {
+    default: '#6200EE',
+    text: {
+      default: '#ffffffdf',
+      inactive: '#ffffff98',
+      disabled: '#ffffff60'
+    }
+  },
   black: '#000000',
   white: '#FFFFFF',
-  surface: 'var(--surface)',
+  // surface: 'var(--surface)',
   ink: 'var(--ink)',
   transparent: '#00000000'
 };
