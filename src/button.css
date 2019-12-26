@@ -2,15 +2,11 @@
 @import './theme.css';
 
 .ao-button {
-  @apply h-36 min-w-64 my-8;
-  @apply inline-flex flex-row justify-center items-center relative;
-  @apply rounded-4 border-none;
-  @apply font-roboto font-medium uppercase text-sm;
   @apply outline-none;
 
   &:enabled {
     &::after {
-      @apply ao-overlay ao-overlay-dark w-full h-full;
+      @apply ao-overlay w-full h-full;
     }
 
     &:hover::after {
@@ -28,6 +24,16 @@
         @apply ao-overlay-focus;
       }
     }
+  }
+
+  &&-raised,
+  &&-unelevated,
+  &&-outlined,
+  &&-text {
+    @apply h-36 min-w-64 my-8;
+    @apply inline-flex flex-row justify-center items-center relative;
+    @apply rounded-4;
+    @apply font-roboto font-medium uppercase text-sm;
   }
 
   &&-raised,
@@ -104,5 +110,27 @@
 
   & > .ao-icons + span {
     @apply ml-8;
+  }
+
+  &&-icon {
+    @apply p-12 relative w-48 h-48;
+    line-height: 1;
+    color: var(--color-in-surface);
+
+    &::after {
+      @apply ao-overlay-in-surface rounded-full;
+    }
+
+    & > .ao-icons {
+      @apply text-2xl;
+    }
+
+    &.in-primary {
+      color: var(--color-in-primary);
+
+      &::after {
+        @apply ao-overlay-in-primary;
+      }
+    }
   }
 }

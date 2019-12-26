@@ -27,3 +27,12 @@ export const outline = () => gen('outlined');
 export const raised = () => gen('raised');
 
 export const unelevated = () => gen('unelevated');
+
+export const icon = () =>
+  `
+    <button class="ao-button ao-button-icon">
+      <i class="ao-icons">
+        menu
+      </i>
+    </button>
+  `;
