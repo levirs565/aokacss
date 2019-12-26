@@ -117,6 +117,10 @@
     line-height: 1;
     color: var(--color-in-surface);
 
+    &:disabled {
+      color: var(--color-in-surface-medium);
+    }
+
     &::after {
       @apply ao-overlay-in-surface rounded-full;
     }
@@ -127,6 +131,10 @@
 
     &.in-primary {
       color: var(--color-in-primary);
+
+      &:disabled {
+        color: var(--color-in-primary-medium);
+      }
 
       &::after {
         @apply ao-overlay-in-primary;

@@ -35,4 +35,9 @@ export const icon = () =>
         menu
       </i>
     </button>
+    <button class="ao-button ao-button-icon" disabled>
+      <i class="ao-icons">
+        menu
+      </i>
+    </button>
   `;
