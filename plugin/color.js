@@ -11,12 +11,13 @@ module.exports = function({ addUtilities, theme }) {
     const text = values.text;
 
     utilities[`${base}-${name}`] = val;
-    utilities[`${base}-${name}-medium`] = val + '98';
-    utilities[`${base}-${name}-low`] = val + '60';
+    utilities[`${base}-${name}-medium`] = val + '99';
+    utilities[`${base}-${name}-low`] = val + '61';
 
-    const textDefault = text + (getColorTone(text) == 'dark' ? 'df' : '');
-    const textMedium = text + '98';
-    const textLow = text + '60';
+    const textDark = getColorTone(text) == 'dark';
+    const textDefault = text + (textDark ? 'df' : '');
+    const textMedium = text + (textDark ? '99' : 'ba');
+    const textLow = text + (textDark ? '61' : '82');
 
     utilities[`${base}-in-${name}`] = textDefault;
     utilities[`${base}-in-${name}-medium`] = textMedium;
