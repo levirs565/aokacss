@@ -1,3 +1,5 @@
+@import './theme.css';
+
 .ao-check {
   @apply relative select-none h-40 flex items-center;
   padding: 10px;
@@ -9,13 +11,14 @@
 
   & > input {
     @apply border-2 border-solid appearance-none;
-    border-color: theme('colors.primary.default');
+    border-color: var(--color-primary);
     border-radius: 2px;
 
     &:disabled {
-      &,
+      border-color: var(--color-primary-low);
+
       & + label span {
-        opacity: 0.38;
+        color: var(--color-in-surface-low);
       }
 
       & + label::after {
@@ -27,11 +30,11 @@
       @apply bg-surface;
 
       &:enabled {
-        background-color: theme('colors.primary.default');
+        background-color: var(--color-primary);
       }
 
       &:enabled + label::before {
-        color: theme('colors.primary.text.default');
+        color: var(--color-in-primary);
       }
     }
 
@@ -59,7 +62,7 @@
     }
 
     &::after {
-      @apply ao-overlay rounded-full w-40 h-40;
+      @apply ao-overlay ao-overlay-primary rounded-full w-40 h-40;
     }
   }
 }

@@ -1,20 +1,23 @@
+@import './theme.css';
+
 .ao-radio {
   @apply relative select-none h-40 flex items-center;
   padding: 10px;
 
   & > input {
     @apply w-20 h-20 left-0 top-0;
-    @apply border-2 border-solid border-surface bg-transparent rounded-full;
+    @apply border-2 border-solid bg-transparent rounded-full;
     @apply cursor-pointer;
-    border-color: theme('colors.surface.text.inactive');
+    border-color: var(--color-in-surface-medium);
     background-clip: content-box;
     appearance: none;
     padding: 3px;
 
     &:disabled {
-      &,
-      & + label {
-        opacity: 0.38;
+      border-color: var(--color-in-surface-low);
+
+      & + label > span {
+        color: var(--color-in-surface-low);
       }
 
       & + label::after {
@@ -23,15 +26,15 @@
     }
 
     &:checked {
-      @apply bg-surface;
-
-      &:enabled,
-      &:enabled + label::after {
-        background-color: theme('colors.primary.default');
-      }
+      background-color: var(--color-in-surface-low);
 
       &:enabled {
-        border-color: theme('colors.primary.default');
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+      }
+
+      &:enabled + label::after {
+        @apply ao-overlay-primary;
       }
     }
 
@@ -52,9 +55,8 @@
     @apply px-16 cursor-pointer;
 
     &::after {
-      @apply ao-overlay ao-overlay-dark rounded-full;
+      @apply ao-overlay ao-overlay-in-surface rounded-full;
       @apply left-0 top-0 w-40 h-40;
-      background-color: theme('colors.surface.text.inactive');
     }
   }
 }

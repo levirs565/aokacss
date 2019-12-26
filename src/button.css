@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+@import './theme.css';
 
 .ao-button {
   @apply h-36 min-w-64 my-8;
@@ -41,18 +42,17 @@
 
   &&-raised,
   &&-unelevated {
-    background-color: theme('colors.primary.default');
-    color: theme('colors.primary.text.default');
+    background-color: var(--color-primary);
+    color: var(--color-in-primary);
 
     &:disabled {
-      background-color: theme('colors.surface.text.disabled');
-      color: theme('colors.surface.text.disabled');
+      background-color: var(--color-in-surface-low);
+      color: var(--color-in-surface-low);
     }
 
     &:enabled {
       &::after {
-        @apply ao-overlay-light;
-        background-color: theme('colors.primary.text.default');
+        @apply ao-overlay-in-primary;
       }
     }
   }
@@ -72,16 +72,15 @@
   &&-text,
   &&-outlined {
     @apply bg-transparent;
-    color: theme('colors.primary.default');
+    color: var(--color-primary);
 
     &:disabled {
-      color: theme('colors.surface.text.disabled');
+      color: var(--color-in-surface-low);
     }
 
     &:enabled {
       &::after {
-        @apply ao-overlay-dark;
-        background-color: theme('colors.primary.default');
+        @apply ao-overlay-primary;
       }
     }
   }
@@ -92,10 +91,10 @@
 
   &&-outlined {
     @apply border border-solid;
-    border-color: theme('colors.primary.default');
+    border-color: var(--color-primary);
 
     &:disabled {
-      border-color: theme('colors.surface.text.disabled');
+      border-color: var(--color-in-surface-low);
     }
   }
 

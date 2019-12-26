@@ -293,27 +293,15 @@ module.exports = {
   },
   background: {
     default: '#ffffff',
-    text: {
-      default: '#000000df',
-      inactive: '#00000098',
-      disabled: '#00000060'
-    }
+    text: '#000000'
   },
   surface: {
     default: '#ffffff',
-    text: {
-      default: '#000000df',
-      inactive: '#00000098',
-      disabled: '#00000060'
-    }
+    text: '#000000'
   },
   primary: {
     default: '#6200EE',
-    text: {
-      default: '#ffffffdf',
-      inactive: '#ffffff98',
-      disabled: '#ffffff60'
-    }
+    text: '#ffffff'
   },
   black: '#000000',
   white: '#FFFFFF',

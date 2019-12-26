@@ -1,3 +1,5 @@
+@import './theme.css';
+
 .ao-text-field {
   @apply relative select-none h-56 m-8;
   width: 280px;
@@ -5,29 +7,29 @@
   & > input,
   & > label > span {
     @apply absolute px-12 font-roboto text-base pt-4;
-    color: theme('colors.surface.text.inactive');
+    color: var(--color-in-surface-medium);
     transition: all 0.3s ease;
   }
 
   & > input {
     @apply w-full h-full pt-20 pb-4;
-    @apply rounded-4 bg-gray-50 border-b border-solid;
-    border-bottom-color: theme('colors.surface.text.disabled');
+    @apply bg-gray-50 rounded-4 border-b border-solid;
+    border-bottom-color: var(--color-in-surface-low);
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
 
-    &:hover {
-      border-bottom-color: theme('colors.surface.text.default');
+    &:hover:enabled {
+      border-bottom-color: var(--color-in-surface);
 
       & + label::after {
         @apply ao-overlay-hover;
       }
     }
 
-    &:focus {
-      border-bottom-color: theme('colors.primary.default');
-      box-shadow: 0 1px 0 0 theme('colors.primary.default');
-      color: theme('colors.surface.text.default');
+    &:focus:enabled {
+      border-bottom-color: var(--color-primary);
+      box-shadow: 0 1px 0 0 var(--color-primary);
+      color: var(--color-in-surface);
 
       & + label::after {
         @apply ao-overlay-focus;
@@ -41,7 +43,7 @@
     }
 
     &:focus + label > span {
-      color: theme('colors.primary.default');
+      color: var(--color-primary);
     }
 
     &:invalid:not(:focus) {
@@ -49,7 +51,11 @@
     }
 
     &:disabled {
-      color: theme('colors.surface.text.disabled');
+      color: var(--color-in-surface-low);
+
+      & + label::after {
+        @apply bg-transparent;
+      }
     }
   }
 
@@ -63,8 +69,7 @@
     }
 
     &::after {
-      @apply ao-overlay ao-overlay-dark w-full h-full;
-      background-color: theme('colors.surface.text.default');
+      @apply ao-overlay ao-overlay-in-surface w-full h-full;
     }
   }
 }

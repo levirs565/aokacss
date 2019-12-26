@@ -1,3 +1,5 @@
+const { getColorTone } = require('../util/color');
+
 const darkInkOpacities = {
   hover: 0.04,
   focus: 0.12,
@@ -24,7 +26,11 @@ function convertOpactities(opacities) {
   return result;
 }
 
-module.exports = function({ addUtilities }) {
+module.exports = function({ addUtilities, theme }) {
+  const colorList = theme('colors');
+  const overlayDark = convertOpactities(darkInkOpacities);
+  const overlayLight = convertOpactities(lightInkOpacities);
+
   const utilities = {
     opacity: '0',
     position: 'absolute',
@@ -33,13 +39,8 @@ module.exports = function({ addUtilities }) {
     pointerEvents: 'none',
     content: '""',
 
-    '&-dark': {
-      ...convertOpactities(darkInkOpacities)
-    },
-
-    '&-light': {
-      ...convertOpactities(lightInkOpacities)
-    },
+    '&-dark': overlayDark,
+    '&-light': overlayLight,
     '&-hover': {
       opacity: 'var(--overlay-hover)'
     },
@@ -52,6 +53,24 @@ module.exports = function({ addUtilities }) {
       opacity: 'var(--overlay-press)'
     }
   };
+
+  function pushClass(color, name) {
+    const tone = getColorTone(color);
+    const props = {
+      'background-color': color,
+      ...(tone == 'dark' ? overlayDark : overlayLight)
+    };
+    utilities[name] = props;
+  }
+
+  ['background', 'surface', 'primary'].forEach(name => {
+    const values = colorList[name];
+    const val = values['default'];
+    const text = values.text;
+
+    pushClass(val, `&-${name}`);
+    pushClass(text, `&-in-${name}`);
+  });
 
   addUtilities({
     '.ao-overlay': utilities
