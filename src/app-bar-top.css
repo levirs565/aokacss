@@ -1,0 +1,16 @@
+.ao-app-bar-top {
+  @apply h-56 w-full flex flex-row items-center px-4 ao-elevation-4;
+  background-color: var(--color-primary);
+
+  & > .ao-button + .title {
+    @apply pl-24;
+  }
+
+  & > .title {
+    @apply flex-grow font-roboto text-xl;
+    color: var(--color-in-primary);
+  }
+
+  & > .actions {
+  }
+}
