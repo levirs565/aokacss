@@ -1,10 +1,12 @@
 .ao-app-bar-top {
-  @apply h-56 w-full flex flex-row items-center px-4 ao-elevation-4 select-none;
+  @apply min-h-56 w-full flex flex-row items-center px-4 ao-elevation-4 select-none;
+  @apply flex-wrap;
   background-color: var(--color-primary);
 
   & > .icon {
     @apply p-12;
     color: var(--color-in-primary);
+    order: 0;
   }
 
   & > .icon + .title {
@@ -12,10 +14,28 @@
   }
 
   & > .title {
-    @apply flex-grow ml-12 font-roboto text-xl;
+    @apply flex-grow ml-12 font-roboto text-xl h-56;
+    line-height: 56px;
     color: var(--color-in-primary);
+    order: 1;
   }
 
   & > .actions {
+    order: 2;
+  }
+
+  & > .ao-tab {
+    order: 3;
+  }
+
+  @screen lg {
+    & > .actions {
+      order: 3;
+    }
+
+    & > .ao-tab {
+      @apply w-auto h-56;
+      order: 2;
+    }
   }
 }
