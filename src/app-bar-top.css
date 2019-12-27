@@ -1,11 +1,11 @@
 .ao-app-bar-top {
   @apply min-h-56 w-full flex flex-row items-center px-4 ao-elevation-4 select-none;
   @apply flex-wrap;
-  background-color: var(--color-primary);
+  background-color: color(primary);
 
   & > .icon {
     @apply p-12;
-    color: var(--color-in-primary);
+    color: color(in-primary);
     order: 0;
   }
 
@@ -16,7 +16,7 @@
   & > .title {
     @apply flex-grow ml-12 font-roboto text-xl h-56;
     line-height: 56px;
-    color: var(--color-in-primary);
+    color: color(in-primary);
     order: 1;
   }
 

@@ -11,14 +11,14 @@
 
   & > input {
     @apply border-2 border-solid appearance-none;
-    border-color: var(--color-primary);
+    border-color: color(primary);
     border-radius: 2px;
 
     &:disabled {
-      border-color: var(--color-primary-low);
+      border-color: color(primary-low);
 
       & + label span {
-        color: var(--color-in-surface-low);
+        color: color(in-surface-low);
       }
 
       & + label::after {
@@ -30,11 +30,11 @@
       @apply bg-surface;
 
       &:enabled {
-        background-color: var(--color-primary);
+        background-color: color(primary);
       }
 
       &:enabled + label::before {
-        color: var(--color-in-primary);
+        color: color(in-primary);
       }
     }
 

@@ -48,12 +48,12 @@
 
   &&-raised,
   &&-unelevated {
-    background-color: var(--color-primary);
-    color: var(--color-in-primary);
+    background-color: color(primary);
+    color: color(in-primary);
 
     &:disabled {
-      background-color: var(--color-in-surface-low);
-      color: var(--color-in-surface-low);
+      background-color: color(in-surface-low);
+      color: color(in-surface-low);
     }
 
     &:enabled {
@@ -78,10 +78,10 @@
   &&-text,
   &&-outlined {
     @apply bg-transparent;
-    color: var(--color-primary);
+    color: color(primary);
 
     &:disabled {
-      color: var(--color-in-surface-low);
+      color: color(in-surface-low);
     }
 
     &:enabled {
@@ -97,10 +97,10 @@
 
   &&-outlined {
     @apply border border-solid;
-    border-color: var(--color-primary);
+    border-color: color(primary);
 
     &:disabled {
-      border-color: var(--color-in-surface-low);
+      border-color: color(in-surface-low);
     }
   }
 
@@ -115,10 +115,10 @@
   &&-icon {
     @apply p-12 relative w-48 h-48;
     line-height: 1;
-    color: var(--color-in-surface);
+    color: color(in-surface);
 
     &:disabled {
-      color: var(--color-in-surface-medium);
+      color: color(in-surface-medium);
     }
 
     &::after {
@@ -130,10 +130,10 @@
     }
 
     &.in-primary {
-      color: var(--color-in-primary);
+      color: color(in-primary);
 
       &:disabled {
-        color: var(--color-in-primary-medium);
+        color: color(in-primary-medium);
       }
 
       &::after {

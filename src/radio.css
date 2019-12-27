@@ -8,16 +8,16 @@
     @apply w-20 h-20 left-0 top-0;
     @apply border-2 border-solid bg-transparent rounded-full;
     @apply cursor-pointer;
-    border-color: var(--color-in-surface-medium);
+    border-color: color(in-surface-medium);
     background-clip: content-box;
     appearance: none;
     padding: 3px;
 
     &:disabled {
-      border-color: var(--color-in-surface-low);
+      border-color: color(in-surface-low);
 
       & + label > span {
-        color: var(--color-in-surface-low);
+        color: color(in-surface-low);
       }
 
       & + label::after {
@@ -26,11 +26,11 @@
     }
 
     &:checked {
-      background-color: var(--color-in-surface-low);
+      background-color: color(in-surface-low);
 
       &:enabled {
-        background-color: var(--color-primary);
-        border-color: var(--color-primary);
+        background-color: color(primary);
+        border-color: color(primary);
       }
 
       &:enabled + label::after {
