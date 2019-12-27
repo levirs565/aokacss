@@ -4,9 +4,9 @@ export default {
 
 function gen(cl) {
   let html = '<div class="flex flex-row"> ';
-  ['green', 'yellow', 'red', 'blue'].forEach(color => {
-    html += `<button class="ao-button ao-button-${cl} mr-4">${color}</button>`;
-    html += `<button disabled="true" class="ao-button ao-button-${cl} mr-4">${color}</button>`;
+  ['primary', 'green', 'yellow', 'red', 'blue'].forEach(color => {
+    html += `<button class="ao-button ao-button-${cl} mr-4 theme-${color}">${color}</button>`;
+    html += `<button disabled="true" class="ao-button ao-button-${cl} mr-4 theme-${color}">${color}</button>`;
   });
 
   html += `<button class="ao-button ao-button-${cl}"><i class="ao-icon">favorite</i><span>Icon</span></button>`;

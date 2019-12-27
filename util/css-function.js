@@ -7,5 +7,8 @@ module.exports = {
   },
   letterSpace(number) {
     return `${number * 0.125}rem`;
+  },
+  widget(name) {
+    return `var(--widget-${name})`;
   }
 };

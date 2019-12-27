@@ -49,8 +49,8 @@
     color: color(in-primary);
 
     &:disabled {
-      background-color: color(in-surface-low);
-      color: color(in-surface-low);
+      background-color: color(in-surface-low) !important;
+      color: color(in-surface-low) !important;
     }
 
     &:enabled {
@@ -78,7 +78,7 @@
     color: color(primary);
 
     &:disabled {
-      color: color(in-surface-low);
+      color: color(in-surface-low) !important;
     }
 
     &:enabled {
@@ -97,7 +97,7 @@
     border-color: color(primary);
 
     &:disabled {
-      border-color: color(in-surface-low);
+      border-color: color(in-surface-low) !important;
     }
   }
 
@@ -126,7 +126,7 @@
       @apply text-2xl;
     }
 
-    &.in-primary {
+    &.theme-primary {
       color: color(in-primary);
 
       &:disabled {
@@ -136,6 +136,42 @@
       &::after {
         @apply ao-overlay-in-primary;
       }
+    }
+  }
+
+  @each $theme in surface, red, pink, purple, deep-purple, indigo, blue,
+    light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange,
+    deep-orange, brown, gray, blue-gray
+  {
+    &&-raised.theme-$(theme),
+    &&-unelevated.theme-$(theme) {
+      background-color: color($(theme));
+      color: color(in-$(theme));
+
+      &:enabled {
+        &::after {
+          @apply ao-overlay-in-$(theme);
+        }
+      }
+    }
+
+    &&-text.theme-$(theme),
+    &&-outlined.theme-$(theme) {
+      color: color($(theme));
+
+      &:enabled {
+        &::after {
+          @apply ao-overlay-$(theme);
+        }
+      }
+    }
+
+    &&-outlined.theme-$(theme) {
+      border-color: color($(theme));
+    }
+
+    &&-icon.theme-$(theme) {
+      color: color(in-$(theme));
     }
   }
 }

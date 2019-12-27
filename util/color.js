@@ -22,11 +22,25 @@ function getColorContrast(back, fore) {
   return Math.max(backLum, foreLum) / Math.min(backLum, foreLum);
 }
 
+function rgbaToRgb(color, back) {
+  const [cR, cG, cB, cA] = parser(color).rgba;
+  const [bR, bG, bB] = parser(back).rgb;
+  const alpha = 1 - cA;
+  // console.log(`${JSON.stringify(parser(color))} ${color} ${alpha}: ${cA}`);
+  const newR = Math.round((cA * (cR / 255) + alpha * (bR / 255)) * 255);
+  const newG = Math.round((cA * (cG / 255) + alpha * (bG / 255)) * 255);
+  const newB = Math.round((cA * (cB / 255) + alpha * (bB / 255)) * 255);
+  return `rgb(${newR}, ${newG}, ${newB})`;
+}
+
 function getColorTone(color) {
   const minimumContrast = 3.1;
 
   const lightContrast = getColorContrast(color, 'white');
-  const darkContrast = getColorContrast(color, 'rgba(0, 0, 0, 0.87)');
+  const darkContrast = getColorContrast(
+    color,
+    rgbaToRgb('rgba(0, 0, 0, 0.87)', color)
+  );
 
   if (lightContrast < minimumContrast && darkContrast > lightContrast)
     return 'light';

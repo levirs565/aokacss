@@ -1,20 +1,19 @@
 const { getColorTone } = require('../util/color');
+const { themedColors, getColor } = require('../theme/theme-util');
 
 module.exports = function({ addUtilities, theme }) {
   let utilities = {};
   const colorList = theme('colors');
   const base = '--color';
 
-  ['background', 'surface', 'primary'].forEach(name => {
+  themedColors.forEach(name => {
     const values = colorList[name];
-    const val = values['default'];
-    const text = values.text;
+    const { val, valDark, text, textDark } = getColor(values);
 
     utilities[`${base}-${name}`] = val;
     utilities[`${base}-${name}-medium`] = val + '99';
     utilities[`${base}-${name}-low`] = val + '61';
 
-    const textDark = getColorTone(text) == 'dark';
     const textDefault = text + (textDark ? 'df' : '');
     const textMedium = text + (textDark ? '99' : 'ba');
     const textLow = text + (textDark ? '61' : '82');

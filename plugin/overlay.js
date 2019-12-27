@@ -1,4 +1,5 @@
 const { getColorTone } = require('../util/color');
+const { themedColors, getColor } = require('../theme/theme-util');
 
 const darkInkOpacities = {
   hover: 0.04,
@@ -63,10 +64,9 @@ module.exports = function({ addUtilities, theme }) {
     utilities[name] = props;
   }
 
-  ['background', 'surface', 'primary'].forEach(name => {
+  themedColors.forEach(name => {
     const values = colorList[name];
-    const val = values['default'];
-    const text = values.text;
+    const { val, text } = getColor(values);
 
     pushClass(val, `&-${name}`);
     pushClass(text, `&-in-${name}`);
