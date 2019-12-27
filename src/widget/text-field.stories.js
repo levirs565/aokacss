@@ -2,8 +2,6 @@ export default {
   title: 'Text Field'
 };
 
-import './text-field.css';
-
 export const singleLine = () =>
   `
   <form>

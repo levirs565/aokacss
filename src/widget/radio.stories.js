@@ -4,8 +4,6 @@ export default {
   title: 'Radio'
 };
 
-import './radio.css';
-
 export const radio = () => {
   return hb.compile(
     `<form action="">

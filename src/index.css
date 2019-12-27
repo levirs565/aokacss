@@ -1,0 +1,7 @@
+@import 'base';
+@import 'widget';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;

@@ -1,5 +1,3 @@
-@import './theme.css';
-
 .ao-text-field {
   @apply relative select-none h-56 m-8;
   width: 280px;

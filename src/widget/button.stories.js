@@ -2,10 +2,6 @@ export default {
   title: 'Button'
 };
 
-import './icon.css';
-import './base.css';
-import './button.css';
-
 function gen(cl) {
   let html = '<div class="flex flex-row"> ';
   ['green', 'yellow', 'red', 'blue'].forEach(color => {
@@ -13,7 +9,7 @@ function gen(cl) {
     html += `<button disabled="true" class="ao-button ao-button-${cl} mr-4">${color}</button>`;
   });
 
-  html += `<button class="ao-button ao-button-${cl}"><i class="ao-icons">favorite</i><span>Icon</span></button>`;
+  html += `<button class="ao-button ao-button-${cl}"><i class="ao-icon">favorite</i><span>Icon</span></button>`;
 
   html += '</div>';
   console.log(html);
@@ -31,12 +27,12 @@ export const unelevated = () => gen('unelevated');
 export const icon = () =>
   `
     <button class="ao-button ao-button-icon">
-      <i class="ao-icons">
+      <i class="ao-icon">
         menu
       </i>
     </button>
     <button class="ao-button ao-button-icon" disabled>
-      <i class="ao-icons">
+      <i class="ao-icon">
         menu
       </i>
     </button>

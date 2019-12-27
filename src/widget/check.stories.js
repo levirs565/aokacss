@@ -4,8 +4,6 @@ export default {
   title: 'Check'
 };
 
-import './check.css';
-
 export const check = () => {
   return hb.compile(
     `<form action="">

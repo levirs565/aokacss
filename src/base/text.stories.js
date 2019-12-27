@@ -2,8 +2,6 @@ export default {
   title: 'Text'
 };
 
-import './text.css';
-
 export const text = () =>
   `
     <div>

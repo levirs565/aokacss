@@ -5,7 +5,8 @@ module.exports = function({ addUtilities }) {
       fontWeight: 'normal',
       fontStyle: 'normal',
       fontSize: '24px',
-      lineHeight: '1'
+      lineHeight: '1',
+      textTransform: 'none'
     }
   });
 };

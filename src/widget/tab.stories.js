@@ -2,8 +2,6 @@ export default {
   title: 'Tab'
 };
 
-import './tab.css';
-
 export const tab = () =>
   `
   <ul class="ao-tab">
