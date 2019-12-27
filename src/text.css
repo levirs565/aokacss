@@ -6,13 +6,13 @@
     }
 
     &-1 {
-      font-size: 6rem;
-      letter-spacing: -0.1875rem;
+      font-size: toRem(96);
+      letter-spacing: letterSpace(-1.5);
     }
 
     &-2 {
-      font-size: 3.75rem;
-      letter-spacing: -0.0625rem;
+      font-size: toRem(60);
+      letter-spacing: letterSpace(-0.5);
     }
 
     &-3,
@@ -22,24 +22,24 @@
     }
 
     &-3 {
-      font-size: 3rem;
+      font-size: toRem(48);
       letter-spacing: 0;
     }
 
     &-4 {
-      font-size: 2.125rem;
-      letter-spacing: 0.03125rem;
+      font-size: toRem(34);
+      letter-spacing: letterSpace(0.25);
     }
 
     &-5 {
-      font-size: 1.5rem;
+      font-size: toRem(24);
       letter-spacing: 0;
     }
 
     &-6 {
       @apply font-roboto font-medium;
-      font-size: 1.25rem;
-      letter-spacing: 0.01875rem;
+      font-size: toRem(20);
+      letter-spacing: letterSpace(0.15);
     }
   }
 
@@ -51,14 +51,14 @@
 
     &-1 {
       @apply font-normal;
-      font-size: 1rem;
-      letter-spacing: 0.01875rem;
+      font-size: toRem(16);
+      letter-spacing: letterSpace(0.15);
     }
 
     &-2 {
       @apply font-medium;
-      font-size: 0.875rem;
-      letter-spacing: 0.0125rem;
+      font-size: toRem(14);
+      letter-spacing: letterSpace(0.1);
     }
   }
 
@@ -69,31 +69,31 @@
     }
 
     &-1 {
-      font-size: 1rem;
-      letter-spacing: 0.0625rem;
+      font-size: toRem(16);
+      letter-spacing: letterSpace(0.5);
     }
 
     &-2 {
-      font-size: 0.875rem;
-      letter-spacing: 0.03125rem;
+      font-size: toRem(14);
+      letter-spacing: letterSpace(0.25);
     }
   }
 
   &-button {
     @apply font-roboto font-medium uppercase;
-    font-size: 0.875rem;
-    letter-spacing: 0.15625rem;
+    font-size: toRem(14);
+    letter-spacing: letterSpace(1.25);
   }
 
   &-caption {
     @apply font-roboto font-normal;
-    font-size: 0.75rem;
-    letter-spacing: 0.05rem;
+    font-size: toRem(12);
+    letter-spacing: letterSpace(0.4);
   }
 
   &-overline {
     @apply font-roboto font-medium uppercase;
-    font-size: 0.625rem;
-    letter-spacing: 0.1875rem;
+    font-size: toRem(10);
+    letter-spacing: letterSpace(1.5);
   }
 }
