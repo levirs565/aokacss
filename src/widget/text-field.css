@@ -16,7 +16,7 @@
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
 
-    &:hover:enabled {
+    &:hover {
       border-bottom-color: color(in-surface);
 
       & + label::after {
@@ -24,7 +24,7 @@
       }
     }
 
-    &:focus:enabled {
+    &:focus {
       border-bottom-color: color(primary);
       box-shadow: 0 1px 0 0 color(primary);
       color: color(in-surface);
@@ -50,6 +50,7 @@
 
     &:disabled {
       color: color(in-surface-low);
+      border-bottom-color: color(in-surface-low);
 
       & + label::after {
         @apply bg-transparent;
