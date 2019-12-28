@@ -1,0 +1,28 @@
+.ao-radio {
+  & > input {
+    @apply bg-transparent rounded-full;
+    border-color: color(in-surface-medium);
+    background-clip: content-box;
+    padding: 3px;
+
+    &:disabled {
+      border-color: color(in-surface-low) !important;
+
+      &:checked {
+        background-color: color(in-surface-low);
+      }
+    }
+
+    &:checked {
+      border-color: color(primary);
+
+      & + label::after {
+        @apply ao-overlay-primary;
+      }
+    }
+  }
+
+  & > label::after {
+    @apply ao-overlay-in-surface;
+  }
+}

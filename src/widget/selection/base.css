@@ -1,3 +1,4 @@
+.ao-radio,
 .ao-check {
   @apply relative select-none h-40 flex items-center;
   padding: 10px;
@@ -9,13 +10,9 @@
 
   & > input {
     @apply border-2 border-solid appearance-none;
-    border-color: color(primary);
-    border-radius: 2px;
 
     &:disabled {
-      border-color: color(primary-low);
-
-      & + label span {
+      & + label > span {
         color: color(in-surface-low);
       }
 
@@ -25,15 +22,7 @@
     }
 
     &:checked {
-      @apply bg-surface;
-
-      &:enabled {
-        background-color: color(primary);
-      }
-
-      &:enabled + label::before {
-        color: color(in-primary);
-      }
+      background-color: color(primary);
     }
 
     &:focus + label::after {
@@ -52,15 +41,8 @@
   & > label {
     @apply px-16 cursor-pointer;
 
-    &::before {
-      @apply absolute text-ink ao-icon text-transparent;
-      content: 'check';
-      margin: 10px;
-      font-size: 20px;
-    }
-
     &::after {
-      @apply ao-overlay ao-overlay-primary rounded-full w-40 h-40;
+      @apply ao-overlay rounded-full w-40 h-40;
     }
   }
 }
