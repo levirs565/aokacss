@@ -1,7 +1,10 @@
 module.exports = {
   plugins: [
     require('postcss-import'),
-    require('postcss-each'),
+    require('postcss-functions')({
+      functions: require('./util/css-config-function')
+    }),
+    require('postcss-advanced-variables'),
     require('tailwindcss'),
     require('postcss-functions')({ functions: require('./util/css-function') }),
     require('postcss-nested'),

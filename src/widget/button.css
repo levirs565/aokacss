@@ -137,31 +137,32 @@
     }
   }
 
-  @each $theme in surface, red, pink, purple, deep-purple, indigo, blue,
-    light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange,
-    deep-orange, brown, gray, blue-gray
-  {
-    &.type-raised.theme-$(theme),
-    &.type-unelevated.theme-$(theme) {
-      background-color: color($(theme));
-      color: color(in-$(theme));
+  $themes: config(color-themes);
+  @if $themes == null {
+  } @else {
+    @each $theme in $themes {
+      &.type-raised.theme-$(theme),
+      &.type-unelevated.theme-$(theme) {
+        background-color: color($(theme));
+        color: color(in-$(theme));
 
-      &::after {
-        @apply ao-overlay-in-$(theme);
+        &::after {
+          @apply ao-overlay-in-$(theme);
+        }
       }
-    }
 
-    &.type-text.theme-$(theme),
-    &.type-outlined.theme-$(theme) {
-      color: color($(theme));
+      &.type-text.theme-$(theme),
+      &.type-outlined.theme-$(theme) {
+        color: color($(theme));
 
-      &::after {
-        @apply ao-overlay-$(theme);
+        &::after {
+          @apply ao-overlay-$(theme);
+        }
       }
-    }
 
-    &.type-outlined.theme-$(theme) {
-      border-color: color($(theme));
+      &.type-outlined.theme-$(theme) {
+        border-color: color($(theme));
+      }
     }
   }
 }
