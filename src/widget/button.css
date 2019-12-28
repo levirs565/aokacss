@@ -1,41 +1,43 @@
 .ao-button {
   @apply outline-none;
 
-  &:enabled {
+  &::after {
+    @apply ao-overlay w-full h-full;
+  }
+
+  &:hover::after {
+    @apply ao-overlay-hover;
+  }
+
+  &:active::after {
+    @apply ao-overlay-press;
+  }
+
+  &:focus {
+    @apply outline-none;
+
     &::after {
-      @apply ao-overlay w-full h-full;
-    }
-
-    &:hover::after {
-      @apply ao-overlay-hover;
-    }
-
-    &:active::after {
-      @apply ao-overlay-press;
-    }
-
-    &:focus {
-      @apply outline-none;
-
-      &::after {
-        @apply ao-overlay-focus;
-      }
+      @apply ao-overlay-focus;
     }
   }
 
-  &&-raised,
-  &&-unelevated,
-  &&-outlined,
-  &&-text {
+  &:disabled::after {
+    @apply bg-transparent !important;
+  }
+
+  &.type-raised,
+  &.type-unelevated,
+  &.type-outlined,
+  &.type-text {
     @apply h-36 min-w-64 my-8;
     @apply inline-flex flex-row justify-center items-center relative;
     @apply rounded-4;
     @apply font-roboto font-medium uppercase text-sm;
   }
 
-  &&-raised,
-  &&-unelevated,
-  &&-outlined {
+  &.type-raised,
+  &.type-unelevated,
+  &.type-outlined {
     @apply px-16;
 
     & > .ao-icon {
@@ -43,8 +45,8 @@
     }
   }
 
-  &&-raised,
-  &&-unelevated {
+  &.type-raised,
+  &.type-unelevated {
     background-color: color(primary);
     color: color(in-primary);
 
@@ -53,14 +55,12 @@
       color: color(in-surface-low) !important;
     }
 
-    &:enabled {
-      &::after {
-        @apply ao-overlay-in-primary;
-      }
+    &::after {
+      @apply ao-overlay-in-primary;
     }
   }
 
-  &&-raised:enabled {
+  &.type-raised:enabled {
     @apply ao-elevation-2;
 
     &:hover {
@@ -72,8 +72,8 @@
     }
   }
 
-  &&-text,
-  &&-outlined {
+  &.type-text,
+  &.type-outlined {
     @apply bg-transparent;
     color: color(primary);
 
@@ -81,18 +81,16 @@
       color: color(in-surface-low) !important;
     }
 
-    &:enabled {
-      &::after {
-        @apply ao-overlay-primary;
-      }
+    &::after {
+      @apply ao-overlay-primary;
     }
   }
 
-  &&-text {
+  &.type-text {
     @apply px-8;
   }
 
-  &&-outlined {
+  &.type-outlined {
     @apply border border-solid;
     border-color: color(primary);
 
@@ -109,7 +107,7 @@
     @apply ml-8;
   }
 
-  &&-icon {
+  &.type-icon {
     @apply p-12 relative w-48 h-48;
     line-height: 1;
     color: color(in-surface);
@@ -143,35 +141,27 @@
     light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange,
     deep-orange, brown, gray, blue-gray
   {
-    &&-raised.theme-$(theme),
-    &&-unelevated.theme-$(theme) {
+    &.type-raised.theme-$(theme),
+    &.type-unelevated.theme-$(theme) {
       background-color: color($(theme));
       color: color(in-$(theme));
 
-      &:enabled {
-        &::after {
-          @apply ao-overlay-in-$(theme);
-        }
+      &::after {
+        @apply ao-overlay-in-$(theme);
       }
     }
 
-    &&-text.theme-$(theme),
-    &&-outlined.theme-$(theme) {
+    &.type-text.theme-$(theme),
+    &.type-outlined.theme-$(theme) {
       color: color($(theme));
 
-      &:enabled {
-        &::after {
-          @apply ao-overlay-$(theme);
-        }
+      &::after {
+        @apply ao-overlay-$(theme);
       }
     }
 
-    &&-outlined.theme-$(theme) {
+    &.type-outlined.theme-$(theme) {
       border-color: color($(theme));
-    }
-
-    &&-icon.theme-$(theme) {
-      color: color(in-$(theme));
     }
   }
 }
