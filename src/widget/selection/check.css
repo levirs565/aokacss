@@ -18,7 +18,7 @@
 
   & > label {
     &::before {
-      @apply absolute ao-icon text-transparent;
+      @apply absolute ao-md-icon text-transparent;
       content: 'check';
       margin: 10px;
       font-size: 20px;

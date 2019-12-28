@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
 .ao-icon {
-  @apply ao-icon;
+  @apply ao-md-icon;
 }
