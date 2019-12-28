@@ -2,21 +2,25 @@ export default {
   title: 'App Bar Top'
 };
 
-export const full = () => {
-  return `
-    <nav class="ao-app-bar-top">
-      <button class="icon ao-button ao-button-icon theme-primary">
-        <i class="ao-icon">menu</i>
-      </button>
-      <span class="title">AokaCSS</span>
+const menu = `
       <div class="actions">
-        <button class="ao-button ao-button-icon theme-primary">
+        <button class="ao-button type-icon theme-primary">
           <i class="ao-icon">search</i>
         </button>
-        <button class="ao-button ao-button-icon theme-primary">
+        <button class="ao-button type-icon theme-primary">
           <i class="ao-icon">more</i>
         </button>
       </div>
+`;
+
+export const full = () => {
+  return `
+    <nav class="ao-app-bar-top">
+      <button class="icon ao-button type-icon theme-primary">
+        <i class="ao-icon">menu</i>
+      </button>
+      <span class="title">AokaCSS</span>
+      ${menu}
     </nav>
   `;
 };
@@ -25,14 +29,7 @@ export const withoutButton = () => {
   return `
     <nav class="ao-app-bar-top">
       <span class="title">AokaCSS</span>
-      <div class="actions">
-        <button class="ao-button ao-button-icon theme-primary">
-          <i class="ao-icon">search</i>
-        </button>
-        <button class="ao-button ao-button-icon theme-primary">
-          <i class="ao-icon">more</i>
-        </button>
-      </div>
+      ${menu}
     </nav>
   `;
 };
@@ -42,14 +39,7 @@ export const withIcon = () => {
     <nav class="ao-app-bar-top">
       <i class="icon ao-icon">more</i>
       <span class="title">AokaCSS</span>
-      <div class="actions">
-        <button class="ao-button ao-button-icon theme-primary">
-          <i class="ao-icon">search</i>
-        </button>
-        <button class="ao-button ao-button-icon theme-primary">
-          <i class="ao-icon">more</i>
-        </button>
-      </div>
+      ${menu}
     </nav>
   `;
 };
@@ -57,18 +47,11 @@ export const withIcon = () => {
 export const withTab = () => {
   return `
     <nav class="ao-app-bar-top">
-      <button class="icon ao-button ao-button-icon theme-primary">
+      <button class="icon ao-button type-icon theme-primary">
         <i class="ao-icon">menu</i>
       </button>
       <span class="title">AokaCSS</span>
-      <div class="actions">
-        <button class="ao-button ao-button-icon theme-primary">
-          <i class="ao-icon">search</i>
-        </button>
-        <button class="ao-button ao-button-icon theme-primary">
-          <i class="ao-icon">more</i>
-        </button>
-      </div>
+      ${menu}
       <ul class="ao-tab">
         <li>
           <span>One</span>
