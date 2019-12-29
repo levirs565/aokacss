@@ -23,17 +23,33 @@ module.exports = {
     'deep-orange',
     'brown',
     'gray',
-    'blue-gray'
+    'blue-gray',
+    'white',
+    'black'
   ],
   getColor(values) {
-    const val = 'default' in values ? values['default'] : values['500'];
+    const val =
+      typeof values == 'string'
+        ? values
+        : 'default' in values
+        ? values['default']
+        : values['500'];
     const valDark = getColorTone(val) == 'dark';
+    const dark =
+      typeof values == 'object' && 'dark' in values
+        ? values['dark']
+        : undefined;
     const text =
-      'text' in values ? values.text : valDark ? '#ffffff' : '#000000';
+      typeof values == 'object' && 'text' in values
+        ? values.text
+        : valDark
+        ? '#ffffff'
+        : '#000000';
     const textDark = getColorTone(text) == 'dark';
     return {
       val,
       valDark,
+      dark,
       text,
       textDark
     };

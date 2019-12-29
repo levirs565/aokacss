@@ -7,11 +7,13 @@ module.exports = function({ addUtilities, theme }) {
 
   themedColors.forEach(name => {
     const values = colorList[name];
-    const { val, valDark, text, textDark } = getColor(values);
+    const { val, valDark, dark, text, textDark } = getColor(values);
 
     utilities[`${base}-${name}`] = val;
     utilities[`${base}-${name}-medium`] = val + '99';
     utilities[`${base}-${name}-low`] = val + '61';
+
+    if (dark != null) utilities[`${base}-${name}-dark`] = dark;
 
     const textDefault = text + (textDark ? 'df' : '');
     const textMedium = text + (textDark ? '99' : 'ba');

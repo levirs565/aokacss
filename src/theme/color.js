@@ -301,11 +301,10 @@ module.exports = {
   },
   primary: {
     default: '#6200EE',
+    dark: '#3700B3',
     text: '#ffffff'
   },
   black: '#000000',
   white: '#FFFFFF',
-  // surface: 'var(--surface)',
-  ink: 'var(--ink)',
   transparent: '#00000000'
 };
