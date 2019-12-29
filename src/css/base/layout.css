@@ -1,0 +1,9 @@
+.container {
+  @apply p-16 mx-auto;
+}
+
+@screen md {
+  .container {
+    @apply p-24;
+  }
+}
