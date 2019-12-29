@@ -4,5 +4,6 @@ module.exports = {
   tab: 'tab.css',
   selection: 'selection/index.css',
   'text-field': 'text-field.css',
-  all: 'index.css'
+  all: 'index.css',
+  card: 'card.css'
 };

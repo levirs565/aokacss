@@ -1,0 +1,37 @@
+.ao-card {
+  @apply rounded-4 ao-elevation-1;
+  background-color: color(surface);
+  color: color(in-surface);
+
+  & > .contents {
+    @apply px-16 pt-16 pb-8 relative cursor-pointer select-none;
+
+    &::after {
+      @apply ao-overlay ao-overlay-in-surface left-0 top-0 w-full h-full;
+    }
+
+    &:hover::after {
+      @apply ao-overlay-hover;
+    }
+
+    &:active::after {
+      @apply ao-overlay-press;
+    }
+
+    &:focus::after {
+      @apply ao-overlay-focus;
+    }
+  }
+
+  & > .actions {
+    @apply px-8 pb-8;
+  }
+
+  & .ao-body-2 {
+    color: color(in-surface-medium);
+  }
+
+  & .ao-button {
+    @apply mb-0;
+  }
+}
