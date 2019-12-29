@@ -1,5 +1,5 @@
 const { getColorTone } = require('../util/color');
-const { themedColors, getColor } = require('../theme/theme-util');
+const { themedColors, getColor } = require('../util/theme');
 
 const darkInkOpacities = {
   hover: 0.04,

@@ -1,4 +1,4 @@
-const { themedColors } = require('../theme/theme-util');
+const { themedColors } = require('./theme');
 
 module.exports = {
   config(name) {

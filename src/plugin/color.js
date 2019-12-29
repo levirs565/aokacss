@@ -1,5 +1,4 @@
-const { getColorTone } = require('../util/color');
-const { themedColors, getColor } = require('../theme/theme-util');
+const { themedColors, getColor } = require('../util/theme');
 
 module.exports = function({ addUtilities, theme }) {
   let utilities = {};

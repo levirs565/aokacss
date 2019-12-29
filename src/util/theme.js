@@ -1,4 +1,4 @@
-const { getColorTone } = require('../util/color');
+const { getColorTone } = require('./color');
 
 module.exports = {
   themedColors: [
