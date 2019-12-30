@@ -24,6 +24,7 @@
     "handlebars": "^4.5.3",
     "postcss-advanced-variables": "^3.0.0",
     "postcss-each": "^0.10.0",
-    "postcss-functions": "^3.0.0"
+    "postcss-functions": "^3.0.0",
+    "postcss-scss": "^2.0.0"
   }
 }

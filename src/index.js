@@ -3,7 +3,8 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = postcss.plugin('aokacss', (options = {}) => {
-  const compiler = postcss(require('./config/postcss').plugins);
+  const compilerOpt = require('./config/postcss');
+  const compiler = postcss(compilerOpt.plugins);
   const maps = require('./css/maps');
   const cssDir = path.resolve(__dirname, './css');
 
@@ -36,7 +37,8 @@ module.exports = postcss.plugin('aokacss', (options = {}) => {
     const buffer = fs.readFileSync(fileName);
 
     return await compiler.process(buffer, {
-      from: fileName
+      from: fileName,
+      syntax: compilerOpt.syntax
     });
   }
 
