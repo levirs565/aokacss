@@ -8,13 +8,17 @@
   }
 }
 
-.ao-grid {
-  @apply flex flex-row flex-wrap;
+.ao-columns {
+  @apply w-full flex flex-row flex-wrap;
   margin-left: -0.25rem;
   margin-right: -0.25rem;
 
   & > div {
-    @apply px-4;
+    @apply p-4 flex-grow;
+  }
+
+  & > .not-grow {
+    @apply flex-grow-0;
   }
 
   @for $i from 1 to 3 {
