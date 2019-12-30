@@ -4,6 +4,23 @@ export default {
 
 const appBar = require('./widget/app-bar-top.stories').withoutButton;
 
+const columnChildClass = 'w-full h-full flex items-center justify-center';
+
+function createFeatureColumns(icon, text, color) {
+  return `
+  <div class="col-4 h-80" style="padding-right: 0 !important;">
+    <div class="rounded-l-24 bg-${color}-500 ${columnChildClass}">
+        <i class="ao-icon text-6xl">${icon}</i>
+    </div>
+  </div>
+  <div class="col-8 h-80" style="padding-left: 0 !important;">
+    <div class="rounded-r-24 bg-${color}-500 ${columnChildClass}">
+        <p class="ao-body-1">${text}</p>
+    </div>
+  </div>
+  `;
+}
+
 export const all = () =>
   `
   ${appBar()}
@@ -22,11 +39,11 @@ export const all = () =>
 
   <div class="container">
     <h2 class="ao-heading-4">What is AokaCSS?</h2>
-    <p class="ao-body-1">AokaCSS is simple Material Design CSS Framework using PostCSS and TailwindCSS. Its hace purpose to create </p>
+    <p class="ao-body-1">AokaCSS is simple Material Design CSS Framework using PostCSS and TailwindCSS. Aoka is</p>
  
-    <div class="ao-grid">
-      <div class="col-4 h-80"><div class="w-full h-full bg-green-500"></div></div>
-      <div class="col-4 h-80"><div class="w-full h-full bg-green-500"></div></div>
+    <div class="ao-grid text-center text-white">
+      ${createFeatureColumns('speed', 'Built for speed', 'green')}
+      ${createFeatureColumns('code', 'Built for simply use', 'blue')}
     </div>
   </div>
 `;
