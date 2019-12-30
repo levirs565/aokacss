@@ -8,7 +8,7 @@
     @apply flex-grow h-full relative cursor-pointer;
     @apply px-16 font-roboto text-base uppercase text-sm;
     color: color(in-primary-medium);
-    min-width: 90px;
+    min-width: toRem(90);
 
     &:hover {
       color: color(in-primary);

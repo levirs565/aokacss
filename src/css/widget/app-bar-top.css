@@ -15,7 +15,7 @@
 
   & > .title {
     @apply flex-grow ml-12 font-roboto text-xl h-56;
-    line-height: 56px;
+    line-height: toRem(56);
     color: color(in-primary);
     order: 1;
   }

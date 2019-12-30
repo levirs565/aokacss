@@ -1,7 +1,7 @@
 .ao-radio,
 .ao-check {
   @apply relative select-none h-40 flex items-center;
-  padding: 10px;
+  padding: toRem(10);
 
   & > input,
   & > label::before {

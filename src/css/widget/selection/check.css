@@ -1,7 +1,7 @@
 .ao-check {
   & > input {
     border-color: color(primary);
-    border-radius: 2px;
+    border-radius: toRem(2);
 
     &:disabled {
       border-color: color(primary-low) !important;
@@ -20,8 +20,8 @@
     &::before {
       @apply absolute ao-md-icon text-transparent;
       content: 'check';
-      margin: 10px;
-      font-size: 20px;
+      margin: toRem(10);
+      font-size: toRem(20);
     }
 
     &::after {

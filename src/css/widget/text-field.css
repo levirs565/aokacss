@@ -1,6 +1,6 @@
 .ao-text-field {
   @apply relative select-none h-56 m-8;
-  width: 280px;
+  width: toRem(280);
 
   & > input,
   & > label > span {
