@@ -55,7 +55,7 @@
     }
   }
 
-  @screen md {
+  @screen lg {
     @for $j from 1 to 11 {
       & .col-#{$j} {
         @apply w-#{$j}/12;
