@@ -100,6 +100,6 @@ module.exports = function({ addUtilities, theme }) {
   }
 
   addUtilities({
-    '.ao-elevation-': utilities
+    '.elevation-': utilities
   });
 };

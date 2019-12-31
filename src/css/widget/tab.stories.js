@@ -4,7 +4,7 @@ export default {
 
 export const tab = () =>
   `
-  <ul class="ao-tab">
+  <ul class="tab">
     <li>
       <span>One</span>
     </li>

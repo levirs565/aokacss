@@ -1,5 +1,5 @@
-.ao-card {
-  @apply flex flex-col rounded-4 ao-elevation-1;
+.card {
+  @apply flex flex-col rounded-4 elevation-1;
   background-color: color(surface);
   color: color(in-surface);
 
@@ -7,19 +7,19 @@
     @apply px-16 pt-16 pb-16 flex-grow relative cursor-pointer select-none;
 
     &::after {
-      @apply ao-overlay ao-overlay-in-surface left-0 top-0 w-full h-full;
+      @apply overlay overlay-in-surface left-0 top-0 w-full h-full;
     }
 
     &:hover::after {
-      @apply ao-overlay-hover;
+      @apply overlay-hover;
     }
 
     &:active::after {
-      @apply ao-overlay-press;
+      @apply overlay-press;
     }
 
     &:focus::after {
-      @apply ao-overlay-focus;
+      @apply overlay-focus;
     }
   }
 
@@ -27,11 +27,11 @@
     @apply px-8 pb-8;
   }
 
-  & .ao-body-2 {
+  & .text-body-2 {
     color: color(in-surface-medium);
   }
 
-  & .ao-button {
+  & .button {
     @apply mb-0;
   }
 }

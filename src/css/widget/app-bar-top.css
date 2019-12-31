@@ -1,5 +1,5 @@
-.ao-app-bar-top {
-  @apply min-h-56 w-full flex flex-row items-center px-4 ao-elevation-4 select-none;
+.app-bar-top {
+  @apply min-h-56 w-full flex flex-row items-center px-4 elevation-4 select-none;
   @apply flex-wrap;
   background-color: color(primary);
 
@@ -24,7 +24,7 @@
     order: 2;
   }
 
-  & > .ao-tab {
+  & > .tab {
     order: 3;
   }
 
@@ -33,7 +33,7 @@
       order: 3;
     }
 
-    & > .ao-tab {
+    & > .tab {
       @apply w-auto h-56;
       order: 2;
     }

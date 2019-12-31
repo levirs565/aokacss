@@ -5,7 +5,7 @@ export default {
 export const singleLine = () =>
   `
   <form>
-  <div class="ao-text-field">
+  <div class="text-field ">
     <input type="text" name="name" required>
     <label for="name">
       <span>
@@ -13,7 +13,7 @@ export const singleLine = () =>
       </span>
     </label>
   </div>
-  <div class="ao-text-field">
+  <div class="text-field ">
     <input type="text" name="id" required disabled>
     <label for="id">
       <span>

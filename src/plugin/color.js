@@ -25,6 +25,6 @@ module.exports = function({ addUtilities, theme }) {
   }
 
   addUtilities({
-    '.ao-theme-color': utilities
+    '.themes': utilities
   });
 };

@@ -73,6 +73,6 @@ module.exports = function({ addUtilities, theme }) {
   }
 
   addUtilities({
-    '.ao-overlay': utilities
+    '.overlay': utilities
   });
 };

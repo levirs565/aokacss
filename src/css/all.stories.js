@@ -12,8 +12,8 @@ export const all = () =>
   ${hero()}
 
   <div class="container">
-    <h2 class="ao-heading-4">What is AokaCSS?</h2>
-    <p class="ao-body-1">AokaCSS is simple Material Design CSS Framework using PostCSS and TailwindCSS. Aoka is</p>
+    <h2 class="heading-4">What is AokaCSS?</h2>
+    <p class="text-body-1">AokaCSS is simple Material Design CSS Framework using PostCSS and TailwindCSS. Aoka is</p>
     ${colums()}
     </div>
 `;

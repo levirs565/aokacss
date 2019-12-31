@@ -5,11 +5,11 @@ export default {
 function gen(cl) {
   let html = '<div class="flex flex-row"> ';
   ['primary', 'green', 'yellow', 'red', 'blue'].forEach(color => {
-    html += `<button class="ao-button type-${cl} mr-4 theme-${color}">${color}</button>`;
-    html += `<button disabled="true" class="ao-button type-${cl} mr-4 theme-${color}">${color}</button>`;
+    html += `<button class="button type-${cl} mr-4 theme-${color}">${color}</button>`;
+    html += `<button disabled="true" class="button type-${cl} mr-4 theme-${color}">${color}</button>`;
   });
 
-  html += `<button class="ao-button type-${cl}"><i class="ao-icon">favorite</i><span>Icon</span></button>`;
+  html += `<button class="button type-${cl}"><i class="icon">favorite</i><span>Icon</span></button>`;
 
   html += '</div>';
   console.log(html);
@@ -26,13 +26,13 @@ export const unelevated = () => gen('unelevated');
 
 export const icon = () =>
   `
-    <button class="ao-button type-icon">
-      <i class="ao-icon">
+    <button class="button type-icon">
+      <i class="icon">
         menu
       </i>
     </button>
-    <button class="ao-button type-icon" disabled>
-      <i class="ao-icon">
+    <button class="button type-icon" disabled>
+      <i class="icon">
         menu
       </i>
     </button>

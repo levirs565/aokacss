@@ -1,6 +1,6 @@
 module.exports = function({ addUtilities }) {
   addUtilities({
-    '.ao-md-icon': {
+    '.md-icon': {
       fontFamily: '"Material Icons"',
       fontWeight: 'normal',
       fontStyle: 'normal',

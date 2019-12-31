@@ -1,4 +1,4 @@
-.ao-check {
+.check {
   & > input {
     border-color: color(primary);
     border-radius: toRem(2);
@@ -18,14 +18,14 @@
 
   & > label {
     &::before {
-      @apply absolute ao-md-icon text-transparent;
+      @apply absolute md-icon text-transparent;
       content: 'check';
       margin: toRem(10);
       font-size: toRem(20);
     }
 
     &::after {
-      @apply ao-overlay-primary;
+      @apply overlay-primary;
     }
   }
 }

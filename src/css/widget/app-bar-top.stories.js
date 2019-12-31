@@ -4,20 +4,20 @@ export default {
 
 const menu = `
       <div class="actions">
-        <button class="ao-button type-icon theme-primary">
-          <i class="ao-icon">search</i>
+        <button class="button type-icon theme-primary">
+          <i class="icon">search</i>
         </button>
-        <button class="ao-button type-icon theme-primary">
-          <i class="ao-icon">more</i>
+        <button class="button type-icon theme-primary">
+          <i class="icon">more</i>
         </button>
       </div>
 `;
 
 export const full = () => {
   return `
-    <nav class="ao-app-bar-top">
-      <button class="icon ao-button type-icon theme-primary">
-        <i class="ao-icon">menu</i>
+    <nav class="app-bar-top">
+      <button class="icon button type-icon theme-primary">
+        <i class="icon">menu</i>
       </button>
       <span class="title">AokaCSS</span>
       ${menu}
@@ -27,7 +27,7 @@ export const full = () => {
 
 export const withoutButton = () => {
   return `
-    <nav class="ao-app-bar-top">
+    <nav class="app-bar-top">
       <span class="title">AokaCSS</span>
       ${menu}
     </nav>
@@ -36,8 +36,8 @@ export const withoutButton = () => {
 
 export const withIcon = () => {
   return `
-    <nav class="ao-app-bar-top">
-      <i class="icon ao-icon">more</i>
+    <nav class="app-bar-top">
+      <i class="icon icon">more</i>
       <span class="title">AokaCSS</span>
       ${menu}
     </nav>
@@ -46,13 +46,13 @@ export const withIcon = () => {
 
 export const withTab = () => {
   return `
-    <nav class="ao-app-bar-top">
-      <button class="icon ao-button type-icon theme-primary">
-        <i class="ao-icon">menu</i>
+    <nav class="app-bar-top">
+      <button class="icon button type-icon theme-primary">
+        <i class="icon">menu</i>
       </button>
       <span class="title">AokaCSS</span>
       ${menu}
-      <ul class="ao-tab">
+      <ul class="tab">
         <li>
           <span>One</span>
         </li>

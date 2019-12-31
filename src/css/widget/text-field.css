@@ -1,4 +1,4 @@
-.ao-text-field {
+.text-field {
   @apply relative select-none h-56 m-8;
   width: toRem(280);
 
@@ -21,7 +21,7 @@
       border-bottom-color: color(in-surface);
 
       & + label::after {
-        @apply ao-overlay-hover;
+        @apply overlay-hover;
       }
     }
 
@@ -31,7 +31,7 @@
       color: color(in-surface);
 
       & + label::after {
-        @apply ao-overlay-focus;
+        @apply overlay-focus;
       }
     }
 
@@ -69,7 +69,7 @@
     }
 
     &::after {
-      @apply ao-overlay ao-overlay-in-surface w-full h-full;
+      @apply overlay overlay-in-surface w-full h-full;
     }
   }
 }

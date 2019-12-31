@@ -1,5 +1,5 @@
-.ao-radio,
-.ao-check {
+.radio,
+.check {
   @apply relative select-none h-40 flex items-center;
   padding: toRem(10);
 
@@ -26,15 +26,15 @@
     }
 
     &:focus + label::after {
-      @apply ao-overlay-focus;
+      @apply overlay-focus;
     }
 
     &:hover:not(:focus):not(:active) + label::after {
-      @apply ao-overlay-hover;
+      @apply overlay-hover;
     }
 
     &:active + label::after {
-      @apply ao-overlay-press;
+      @apply overlay-press;
     }
   }
 
@@ -42,7 +42,7 @@
     @apply px-16 cursor-pointer;
 
     &::after {
-      @apply ao-overlay rounded-full w-40 h-40;
+      @apply overlay rounded-full w-40 h-40;
     }
   }
 }

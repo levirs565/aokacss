@@ -1,4 +1,4 @@
-.ao-tab {
+.tab {
   @apply w-full h-48 list-none select-none;
   @apply flex flex-row;
   background: color(primary);
@@ -20,15 +20,15 @@
     }
 
     &::after {
-      @apply ao-overlay ao-overlay-in-primary w-full h-full;
+      @apply overlay overlay-in-primary w-full h-full;
     }
 
     &:hover::after {
-      @apply ao-overlay-hover;
+      @apply overlay-hover;
     }
 
     &:active::after {
-      @apply ao-overlay-press;
+      @apply overlay-press;
     }
   }
 }

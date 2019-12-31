@@ -1,4 +1,4 @@
-.ao-radio {
+.radio {
   & > input {
     @apply bg-transparent rounded-full;
     border-color: color(in-surface-medium);
@@ -17,12 +17,12 @@
       border-color: color(primary);
 
       & + label::after {
-        @apply ao-overlay-primary;
+        @apply overlay-primary;
       }
     }
   }
 
   & > label::after {
-    @apply ao-overlay-in-surface;
+    @apply overlay-in-surface;
   }
 }

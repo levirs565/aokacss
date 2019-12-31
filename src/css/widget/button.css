@@ -1,23 +1,23 @@
-.ao-button {
+.button {
   @apply outline-none;
 
   &::after {
-    @apply ao-overlay w-full h-full;
+    @apply overlay w-full h-full;
   }
 
   &:hover::after {
-    @apply ao-overlay-hover;
+    @apply overlay-hover;
   }
 
   &:active::after {
-    @apply ao-overlay-press;
+    @apply overlay-press;
   }
 
   &:focus {
     @apply outline-none;
 
     &::after {
-      @apply ao-overlay-focus;
+      @apply overlay-focus;
     }
   }
 
@@ -40,7 +40,7 @@
   &.type-outlined {
     @apply px-16;
 
-    & > .ao-icon {
+    & > .icon {
       margin-left: -0.25rem;
     }
   }
@@ -56,19 +56,19 @@
     }
 
     &::after {
-      @apply ao-overlay-in-primary;
+      @apply overlay-in-primary;
     }
   }
 
   &.type-raised:enabled {
-    @apply ao-elevation-2;
+    @apply elevation-2;
 
     &:hover {
-      @apply ao-elevation-4;
+      @apply elevation-4;
     }
 
     &:active {
-      @apply ao-elevation-8;
+      @apply elevation-8;
     }
   }
 
@@ -82,7 +82,7 @@
     }
 
     &::after {
-      @apply ao-overlay-primary;
+      @apply overlay-primary;
     }
   }
 
@@ -99,11 +99,11 @@
     }
   }
 
-  & > .ao-icon {
+  & > .icon {
     @apply text-lg;
   }
 
-  & > .ao-icon + span {
+  & > .icon + span {
     @apply ml-8;
   }
 
@@ -117,10 +117,10 @@
     }
 
     &::after {
-      @apply ao-overlay-in-surface rounded-full;
+      @apply overlay-in-surface rounded-full;
     }
 
-    & > .ao-icon {
+    & > .icon {
       @apply text-2xl;
     }
 
@@ -132,7 +132,7 @@
       }
 
       &::after {
-        @apply ao-overlay-in-primary;
+        @apply overlay-in-primary;
       }
     }
   }
@@ -147,7 +147,7 @@
         color: color(in-$(theme));
 
         &::after {
-          @apply ao-overlay-in-$(theme);
+          @apply overlay-in-$(theme);
         }
       }
 
@@ -156,7 +156,7 @@
         color: color($(theme));
 
         &::after {
-          @apply ao-overlay-$(theme);
+          @apply overlay-$(theme);
         }
       }
 
