@@ -17,7 +17,7 @@ function createFeatureColumns(icon, text) {
 
 export const title = () =>
   `
-    <div class="ao-columns">
+    <div class="ao-columns text-center">
       ${createFeatureColumns('speed', 'Built for speed')}
       ${createFeatureColumns('code', 'Built for simply use')}
       ${createFeatureColumns('speed', 'Built for speed')}

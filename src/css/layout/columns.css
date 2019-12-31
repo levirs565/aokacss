@@ -29,7 +29,7 @@
     @apply w-full;
   }
 
-  @screen sm {
+  @screen tablet {
     @for $j from 1 to 7 {
       & .col-#{$j} {
         @apply w-#{$j}/8;
@@ -45,7 +45,7 @@
     }
   }
 
-  @screen lg {
+  @screen laptop {
     @for $j from 1 to 11 {
       & .col-#{$j} {
         @apply w-#{$j}/12;

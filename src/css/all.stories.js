@@ -4,6 +4,7 @@ export default {
 
 const appBar = require('./widget/app-bar-top.stories').withoutButton;
 const hero = require('./layout/hero.stories').hero;
+const colums = require('./layout/columns.stories').title;
 
 export const all = () =>
   `
@@ -13,5 +14,6 @@ export const all = () =>
   <div class="container">
     <h2 class="ao-heading-4">What is AokaCSS?</h2>
     <p class="ao-body-1">AokaCSS is simple Material Design CSS Framework using PostCSS and TailwindCSS. Aoka is</p>
-  </div>
+    ${colums()}
+    </div>
 `;

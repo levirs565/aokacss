@@ -28,7 +28,7 @@
     order: 3;
   }
 
-  @screen lg {
+  @screen laptop {
     & > .actions {
       order: 3;
     }

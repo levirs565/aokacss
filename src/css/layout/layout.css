@@ -6,7 +6,7 @@
   @apply p-16 mx-auto;
 }
 
-@screen md {
+@screen laptop {
   .container {
     @apply p-24;
   }
