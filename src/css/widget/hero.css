@@ -1,0 +1,9 @@
+.ao-hero {
+  background-color: color(primary);
+  color: color(in-primary);
+
+  & p,
+  div {
+    @apply text-center;
+  }
+}

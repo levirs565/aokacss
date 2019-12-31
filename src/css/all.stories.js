@@ -3,6 +3,7 @@ export default {
 };
 
 const appBar = require('./widget/app-bar-top.stories').withoutButton;
+const hero = require('./widget/hero.stories').hero;
 
 const columnChildClass = 'w-full h-full flex items-center justify-center';
 
@@ -22,18 +23,7 @@ function createFeatureColumns(icon, text) {
 export const all = () =>
   `
   ${appBar()}
-  <div class="bg-primary flex flex-col items-center">
-    <h1 class="ao-heading-1 text-white">AokaCSS</h1>
-    <h2 class="ao-heading-4 text-white text-center">Simple Material Design CSS Framework using PostCSS and TailwindCSS</h2>
-    <div>
-      <button class="ao-button type-outlined theme-white">
-        Download
-      </button>
-      <button class="ao-button type-unelevated theme-white">
-        Get Started
-      </button>
-    </div>
-  </div>
+  ${hero()}
 
   <div class="container">
     <h2 class="ao-heading-4">What is AokaCSS?</h2>
