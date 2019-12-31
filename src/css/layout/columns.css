@@ -1,17 +1,3 @@
-body {
-  background: color(background);
-}
-
-.container {
-  @apply p-16 mx-auto;
-}
-
-@screen md {
-  .container {
-    @apply p-24;
-  }
-}
-
 .ao-columns {
   @apply w-full flex flex-row flex-wrap;
   margin-left: -0.25rem;
