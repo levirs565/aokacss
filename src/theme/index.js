@@ -1,8 +1,8 @@
 const color = require('./color');
 const unit = require('./unit');
 
-module.exports = {
-  colors: color,
+module.exports = (themeColors, nonThemeColors) => ({
+  colors: color(themeColors, nonThemeColors),
   extend: {
     spacing: unit,
     minWidth: unit,
@@ -12,4 +12,4 @@ module.exports = {
       roboto: ['Roboto', 'sans-serif']
     }
   }
-};
+});

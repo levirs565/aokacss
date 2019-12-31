@@ -1,1 +1,3 @@
-module.exports = require('./src/config/postcss');
+module.exports = require('./src/configProvider')(
+  require('./src/defaultConfig')
+);

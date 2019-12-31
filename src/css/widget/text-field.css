@@ -11,7 +11,8 @@
 
   & > input {
     @apply w-full h-full pt-20 pb-4;
-    @apply bg-gray-50 rounded-4 border-b border-solid;
+    @apply rounded-4 border-b border-solid;
+    background-color: color(background);
     border-bottom-color: color(in-surface-low);
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;

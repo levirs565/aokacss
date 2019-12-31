@@ -1,5 +1,5 @@
 const { getColorTone } = require('../util/color');
-const { themedColors, getColor } = require('../util/theme');
+const { getColor } = require('../util/theme');
 
 const darkInkOpacities = {
   hover: 0.04,
@@ -64,13 +64,13 @@ module.exports = function({ addUtilities, theme }) {
     utilities[name] = props;
   }
 
-  themedColors.forEach(name => {
+  for (const name in colorList) {
     const values = colorList[name];
     const { val, text } = getColor(values);
 
     pushClass(val, `&-${name}`);
     pushClass(text, `&-in-${name}`);
-  });
+  }
 
   addUtilities({
     '.ao-overlay': utilities

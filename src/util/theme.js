@@ -1,7 +1,7 @@
 const { getColorTone } = require('./color');
 
 module.exports = {
-  themedColors: [
+  colors: [
     'background',
     'surface',
     'primary',

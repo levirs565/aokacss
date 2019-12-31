@@ -1,11 +1,11 @@
-const { themedColors, getColor } = require('../util/theme');
+const { getColor } = require('../util/theme');
 
 module.exports = function({ addUtilities, theme }) {
   let utilities = {};
   const colorList = theme('colors');
   const base = '--color';
 
-  themedColors.forEach(name => {
+  for (name in colorList) {
     const values = colorList[name];
     const { val, valDark, dark, text, textDark } = getColor(values);
 
@@ -22,7 +22,7 @@ module.exports = function({ addUtilities, theme }) {
     utilities[`${base}-in-${name}`] = textDefault;
     utilities[`${base}-in-${name}-medium`] = textMedium;
     utilities[`${base}-in-${name}-low`] = textLow;
-  });
+  }
 
   addUtilities({
     '.ao-theme-color': utilities

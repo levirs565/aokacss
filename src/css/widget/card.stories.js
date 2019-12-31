@@ -4,7 +4,7 @@ export default {
 
 export const simple = () =>
   `
-  <div class="h-screen flex bg-gray-50">
+  <div class="h-screen flex bg-background">
     <div class="ao-card m-auto">
       <div class="contents">
         <p class="ao-heading-5">Title</p>

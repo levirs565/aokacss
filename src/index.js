@@ -3,12 +3,14 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = postcss.plugin('aokacss', (options = {}) => {
-  const compilerOpt = require('./config/postcss');
+  const opts = Object.assign(require('./defaultConfig'), options);
+
+  const compilerOpt = require('./config/postcss')(opts);
   const compiler = postcss(compilerOpt.plugins);
   const maps = require('./css/maps');
   const cssDir = path.resolve(__dirname, './css');
 
-  async function compile(style) {
+  function getStyleFileName(style) {
     const pathList = style.split('/');
     let fileName = '.';
     let currentMap = maps;
@@ -33,7 +35,11 @@ module.exports = postcss.plugin('aokacss', (options = {}) => {
       }
     }
 
-    fileName = path.join(cssDir, fileName);
+    return path.join(cssDir, fileName);
+  }
+
+  async function compile(style) {
+    const fileName = getStyleFileName(style);
     const buffer = fs.readFileSync(fileName);
 
     return await compiler.process(buffer, {
