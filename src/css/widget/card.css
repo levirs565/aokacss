@@ -3,6 +3,10 @@
   background-color: color(surface);
   color: color(in-surface);
 
+  & > .img {
+    @apply w-full;
+  }
+
   & > .contents {
     @apply px-16 pt-16 pb-16 flex-grow relative cursor-pointer select-none;
 

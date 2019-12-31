@@ -4,8 +4,9 @@ export default {
 
 function createFeatureColumns(icon, text) {
   return `
-    <div class="col-4">
-      <div class="card" style="height: 128px;">
+    <div class="col-4 not-grow">
+      <div class="card">
+        <img class="img" src="https://scx1.b-cdn.net/csz/news/800/2019/1-howtodesigna.jpg">
         <div class="contents">
           <p class="heading-5"><i class="icon text-6xl ">${icon}</i></p>
           <p class="text-body-2">${text}</p>
