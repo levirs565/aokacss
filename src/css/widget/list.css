@@ -1,0 +1,67 @@
+.list {
+  @apply select-none;
+
+  & .text-body-2 {
+    color: color(in-surface-medium);
+  }
+
+  & > .item {
+    @apply relative h-48 px-16 py-8 flex flex-row items-center;
+
+    &::after {
+      @apply overlay overlay-in-background w-full h-full;
+    }
+
+    &:hover::after {
+      @apply overlay-hover;
+    }
+
+    &:active::after {
+      @apply overlay-press;
+    }
+  }
+
+  &.line-2 {
+    & > .item {
+      @apply h-64;
+    }
+  }
+
+  &.img-sm,
+  &.img-md {
+    & > .item {
+      @apply h-56;
+    }
+
+    &.line-2 {
+      & > .item {
+        @apply h-72;
+      }
+    }
+  }
+
+  &.img-sm > .item > .img {
+    @apply w-24 h-24 my-8 mr-32;
+  }
+
+  &.img-md > .item > .img {
+    @apply w-40 h-40 mr-16;
+  }
+
+  &.img-lg,
+  &.img-xl {
+    & > .item {
+      @apply h-72;
+    }
+  }
+
+  &.img-lg > .item > .img {
+    @apply w-56 h-56 mr-16;
+  }
+
+  &.img-xl > .item > .img {
+    @apply h-56 mr-16;
+    width: toRem(100);
+    margin-left: toRem(-16);
+  }
+}
