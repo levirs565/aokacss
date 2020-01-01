@@ -1,65 +1,75 @@
 .list {
   @apply select-none;
+}
+
+.list-item {
+  @apply relative min-h-48 px-16 py-8 flex flex-row;
 
   & .text-body-2 {
     color: color(in-surface-medium);
   }
 
-  & > .item {
-    @apply relative h-48 px-16 py-8 flex flex-row items-center;
+  &::after {
+    @apply overlay overlay-in-background w-full h-full;
+  }
 
-    &::after {
-      @apply overlay overlay-in-background w-full h-full;
+  &:hover::after {
+    @apply overlay-hover;
+  }
+
+  &:active::after {
+    @apply overlay-press;
+  }
+
+  & .text {
+    @apply flex-grow self-center;
+  }
+
+  &.line-2,
+  &.line-3 {
+    & .img-md,
+    & .img-lg {
+      @apply my-8;
     }
 
-    &:hover::after {
-      @apply overlay-hover;
-    }
-
-    &:active::after {
-      @apply overlay-press;
+    & .img-lg {
+      @apply w-40 h-40;
     }
   }
 
   &.line-2 {
-    & > .item {
-      @apply h-64;
+    @apply min-h-64;
+
+    & .img-sm {
+      @apply mb-24;
+    }
+
+    & .img-md {
+      @apply mb-8;
     }
   }
 
-  &.img-sm,
-  &.img-md {
-    & > .item {
-      @apply h-56;
-    }
+  &.line-3 {
+    min-height: toRem(88);
 
-    &.line-2 {
-      & > .item {
-        @apply h-72;
-      }
+    & .img-xl {
+      @apply mt-8;
     }
   }
 
-  &.img-sm > .item > .img {
+  & .img-sm {
     @apply w-24 h-24 my-8 mr-32;
   }
 
-  &.img-md > .item > .img {
+  & .img-md {
     @apply w-40 h-40 mr-16;
   }
 
-  &.img-lg,
-  &.img-xl {
-    & > .item {
-      @apply h-72;
-    }
-  }
-
-  &.img-lg > .item > .img {
+  & .img-lg {
     @apply w-56 h-56 mr-16;
   }
 
-  &.img-xl > .item > .img {
+  & .img-xl {
     @apply h-56 mr-16;
     width: toRem(100);
     margin-left: toRem(-16);
