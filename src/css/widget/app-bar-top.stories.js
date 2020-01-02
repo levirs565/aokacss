@@ -12,6 +12,7 @@ const menu = `
         </button>
       </div>
 `;
+const tab = require('./tab.stories').tab;
 
 export const full = () => {
   return `
@@ -52,20 +53,7 @@ export const withTab = () => {
       </button>
       <span class="title">AokaCSS</span>
       ${menu}
-      <ul class="tab">
-        <li>
-          <span>One</span>
-        </li>
-        <li class="selected">
-          <span>Two</span>
-        </li>
-        <li>
-          <span>Three</span>
-        </li>
-        <li>
-          <span>Four</span>
-        </li>
-      </ul>
+      ${tab()}
     </nav>
     <div>
       <h1>One</h1>

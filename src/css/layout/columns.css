@@ -10,49 +10,49 @@
   & > .not-grow {
     @apply flex-grow-0;
   }
+}
 
-  @for $i from 1 to 3 {
-    & .col-#{$i} {
-      @apply w-#{$i}/4;
+@for $i from 1 to 3 {
+  .col-#{$i} {
+    @apply w-#{$i}/4;
+  }
+}
+
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  @apply w-full;
+}
+
+@screen tablet {
+  @for $j from 1 to 7 {
+    .col-#{$j} {
+      @apply w-#{$j}/8;
     }
   }
 
-  & .col-4,
-  & .col-5,
-  & .col-6,
-  & .col-7,
-  & .col-8,
-  & .col-9,
-  & .col-10,
-  & .col-11,
-  & .col-12 {
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
     @apply w-full;
   }
+}
 
-  @screen tablet {
-    @for $j from 1 to 7 {
-      & .col-#{$j} {
-        @apply w-#{$j}/8;
-      }
-    }
-
-    & .col-8,
-    & .col-9,
-    & .col-10,
-    & .col-11,
-    & .col-12 {
-      @apply w-full;
+@screen laptop {
+  @for $j from 1 to 11 {
+    .col-#{$j} {
+      @apply w-#{$j}/12;
     }
   }
-
-  @screen laptop {
-    @for $j from 1 to 11 {
-      & .col-#{$j} {
-        @apply w-#{$j}/12;
-      }
-    }
-    & .col-12 {
-      @apply w-full;
-    }
+  .col-12 {
+    @apply w-full;
   }
 }

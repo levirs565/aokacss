@@ -2,33 +2,33 @@
   @apply w-full h-48 list-none select-none;
   @apply flex flex-row;
   background: color(primary);
+}
 
-  & > li {
-    @apply inline-flex justify-center items-center;
-    @apply flex-grow h-full relative cursor-pointer;
-    @apply px-16 font-roboto text-base uppercase text-sm;
-    color: color(in-primary-medium);
-    min-width: toRem(90);
+.tab-item {
+  @apply inline-flex justify-center items-center;
+  @apply flex-grow h-full relative cursor-pointer;
+  @apply px-16 font-roboto text-base uppercase text-sm;
+  color: color(in-primary-medium);
+  min-width: toRem(90);
 
-    &:hover {
-      color: color(in-primary);
-    }
+  &:hover {
+    color: color(in-primary);
+  }
 
-    &.selected {
-      color: color(in-primary);
-      box-shadow: inset 0 -2px 0 color(in-primary);
-    }
+  &.selected {
+    color: color(in-primary);
+    box-shadow: inset 0 -2px 0 color(in-primary);
+  }
 
-    &::after {
-      @apply overlay overlay-in-primary w-full h-full;
-    }
+  &::after {
+    @apply overlay overlay-in-primary w-full h-full;
+  }
 
-    &:hover::after {
-      @apply overlay-hover;
-    }
+  &:hover::after {
+    @apply overlay-hover;
+  }
 
-    &:active::after {
-      @apply overlay-press;
-    }
+  &:active::after {
+    @apply overlay-press;
   }
 }
