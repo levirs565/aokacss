@@ -1,2 +1,3 @@
 .storybook/
 **/*.stories.js
+yarn.lock
