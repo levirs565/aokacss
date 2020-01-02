@@ -2,29 +2,30 @@
   "name": "aokacss",
   "version": "0.1.0",
   "description": "Simple Material Design CSS Library",
-  "main": "index.js",
+  "repository": "https://github.com/levirs565/aokacss",
+  "author": "Levi Rizki Saputra",
+  "license": "MIT",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "Levi Rizki Saputra",
-  "license": "MIT",
   "dependencies": {
     "parse-color": "^1.0.0",
     "postcss": "^7.0.24",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "^1.1.4",
+    "postcss-advanced-variables": "^3.0.0",
+    "postcss-each": "^0.10.0",
+    "postcss-functions": "^3.0.0",
+    "postcss-scss": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@storybook/html": "^5.2.8",
     "babel-loader": "^8.0.6",
-    "handlebars": "^4.5.3",
-    "postcss-advanced-variables": "^3.0.0",
-    "postcss-each": "^0.10.0",
-    "postcss-functions": "^3.0.0",
-    "postcss-scss": "^2.0.0"
+    "handlebars": "^4.5.3"
   }
 }

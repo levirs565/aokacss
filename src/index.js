@@ -5,7 +5,7 @@ const fs = require('fs');
 module.exports = postcss.plugin('aokacss', (options = {}) => {
   const opts = Object.assign(require('./defaultConfig'), options);
 
-  const compilerOpt = require('./config/postcss')(opts);
+  const compilerOpt = require('./configProvider')(opts);
   const compiler = postcss(compilerOpt.plugins);
   const maps = require('./css/maps');
   const cssDir = path.resolve(__dirname, './css');
