@@ -4,15 +4,24 @@ body {
 }
 
 .container {
-  @apply p-16 mx-auto;
+  @apply p-16 mx-auto w-full;
+  box-sizing: content-box;
+  max-width: calc(100vw - 10%);
 }
 
 * {
   box-sizing: border-box;
 }
 
+@screen tablet {
+  .container {
+    max-width: calc(100vw - 15%);
+  }
+}
+
 @screen laptop {
   .container {
     @apply p-24;
+    max-width: calc(100vw - 30%);
   }
 }
