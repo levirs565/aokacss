@@ -9,9 +9,9 @@ function genList(cl, line) {
     <li class="list-item line-${line}">
       <img class="img ${cl} bg-gray">
       <div class="text">
-        <p class="text-body-1">T${i}</p>
-        ${line >= 2 ? `<p class="text-body-2">${i}</p>` : ''}
-        ${line >= 3 ? `<p class="text-body-2">${i}</p>` : ''}
+          <span class="text-body-1">T${i}</span><br>
+          ${line >= 2 ? `<span class="text-body-2">${i}</span><br>` : ''}
+          ${line >= 3 ? `<span class="text-body-2">${i}</span>` : ''}
       </div>
     </li>
     `;
@@ -32,9 +32,9 @@ function genWithCard(cl, line) {
       <div class="list-item card tablet-grid line-${line}">
         <img class="img ${cl}" src="https://scx1.b-cdn.net/csz/news/800/2019/1-howtodesigna.jpg">
         <div class="text">
-          <p class="text-body-1">T${i}</p>
-          ${line >= 2 ? `<p class="text-body-2">${i}</p>` : ''}
-          ${line >= 3 ? `<p class="text-body-2">${i}</p>` : ''}
+          <span class="text-body-1">T${i}</span><br>
+          ${line >= 2 ? `<span class="text-body-2">${i}</span><br>` : ''}
+          ${line >= 3 ? `<span class="text-body-2">${i}</span>` : ''}
         </div>
       </div>
     </div>

@@ -1,9 +1,14 @@
-.body {
+body {
+  @apply m-0;
   background: color(background);
 }
 
 .container {
   @apply p-16 mx-auto;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 @screen laptop {

@@ -1,5 +1,5 @@
 .button {
-  @apply outline-none;
+  @apply outline-none appearance-none border-none cursor-pointer;
 
   &::after {
     @apply overlay w-full h-full;
@@ -108,7 +108,7 @@
   }
 
   &.type-icon {
-    @apply p-12 relative w-48 h-48;
+    @apply bg-transparent p-12 relative w-48 h-48;
     line-height: 1;
     color: color(in-surface);
 

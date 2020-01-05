@@ -1,9 +1,9 @@
 .list {
-  @apply select-none;
+  @apply select-none p-0;
 }
 
 .list-item {
-  @apply relative min-h-48 px-16 py-8 flex flex-row;
+  @apply relative min-h-48 px-16 py-8 flex flex-row cursor-pointer;
 
   & .text-body-2 {
     color: color(in-surface-medium);
