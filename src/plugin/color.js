@@ -18,10 +18,12 @@ module.exports = function({ addUtilities, theme }) {
     const textDefault = text + (textDark ? 'df' : '');
     const textMedium = text + (textDark ? '99' : 'ba');
     const textLow = text + (textDark ? '61' : '82');
+    const textVeryLow = text + '3d';
 
     utilities[`${base}-in-${name}`] = textDefault;
     utilities[`${base}-in-${name}-medium`] = textMedium;
     utilities[`${base}-in-${name}-low`] = textLow;
+    utilities[`${base}-in-${name}-very-low`] = textVeryLow;
   }
 
   addUtilities({
