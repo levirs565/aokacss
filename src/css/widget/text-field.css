@@ -5,7 +5,7 @@
   & > input,
   & > label > span {
     @apply absolute font-roboto text-base;
-    color: color(in-surface-medium);
+    color: color(in-surface-low);
     transition: all 0.3s ease;
   }
 
@@ -13,7 +13,7 @@
     @apply w-full h-full px-12 py-16;
     @apply rounded-4 border border-solid;
     background-color: color(background);
-    border-color: color(in-surface-medium);
+    border-color: color(in-surface-low);
 
     &:hover {
       border-color: color(in-surface);
@@ -41,8 +41,8 @@
     }
 
     &:disabled {
-      color: color(in-surface-low);
-      border-color: color(in-surface-low);
+      color: color(in-surface-very-low);
+      border-color: color(in-surface-very-low);
     }
   }
 
