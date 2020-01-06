@@ -4,18 +4,18 @@ export default {
 
 export const tab = () =>
   `
-  <ul class="tab">
-    <li class="tab-item">
+  <div class="tab">
+    <a class="tab-item button">
       <span>One</span>
-    </li>
-    <li class="tab-item selected">
+    </a>
+    <a class="tab-item button selected">
       <span>Two</span>
-    </li>
-    <li class="tab-item">
+    </a>
+    <a class="tab-item button">
       <span>Three</span>
-    </li>
-    <li class="tab-item">
+    </a>
+    <a class="tab-item button">
       <span>Four</span>
-    </li>
-  </ul>
+    </a>
+  </div>
 `;

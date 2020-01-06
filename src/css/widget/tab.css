@@ -7,7 +7,8 @@
 .tab-item {
   @apply inline-flex justify-center items-center;
   @apply flex-grow h-full relative cursor-pointer;
-  @apply px-16 font-roboto text-base uppercase text-sm;
+  @apply px-16 bg-transparent;
+  letter-spacing: normal;
   color: color(in-primary-medium);
   min-width: toRem(90);
 
@@ -21,14 +22,6 @@
   }
 
   &::after {
-    @apply overlay overlay-in-primary w-full h-full;
-  }
-
-  &:hover::after {
-    @apply overlay-hover;
-  }
-
-  &:active::after {
-    @apply overlay-press;
+    @apply overlay-in-primary;
   }
 }
