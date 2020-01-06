@@ -6,5 +6,6 @@ module.exports = {
   'text-field': 'text-field.css',
   all: 'index.css',
   card: 'card.css',
-  list: 'list.css'
+  list: 'list.css',
+  table: 'table.css'
 };
