@@ -4,41 +4,32 @@
 
   & > input,
   & > label > span {
-    @apply absolute px-12 font-roboto text-base pt-4;
+    @apply absolute font-roboto text-base;
     color: color(in-surface-medium);
     transition: all 0.3s ease;
   }
 
   & > input {
-    @apply w-full h-full pt-20 pb-4;
-    @apply rounded-4 border-b border-solid;
+    @apply w-full h-full px-12 py-16;
+    @apply rounded-4 border border-solid;
     background-color: color(background);
-    border-bottom-color: color(in-surface-low);
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
+    border-color: color(in-surface-medium);
 
     &:hover {
-      border-bottom-color: color(in-surface);
-
-      & + label::after {
-        @apply overlay-hover;
-      }
+      border-color: color(in-surface);
     }
 
     &:focus {
-      border-bottom-color: color(primary);
-      box-shadow: 0 1px 0 0 color(primary);
+      border-color: color(primary);
+      box-shadow: 0 0 0 1px color(primary);
       color: color(in-surface);
-
-      & + label::after {
-        @apply overlay-focus;
-      }
     }
 
     &:focus + label > span,
     &:valid + label > span {
       @apply text-xs;
-      transform: translateY(-110%);
+      color: color(in-surface);
+      top: 0%;
     }
 
     &:focus + label > span {
@@ -51,11 +42,7 @@
 
     &:disabled {
       color: color(in-surface-low);
-      border-bottom-color: color(in-surface-low);
-
-      & + label::after {
-        @apply bg-transparent;
-      }
+      border-color: color(in-surface-low);
     }
   }
 
@@ -63,13 +50,11 @@
     @apply pointer-events-none inline-block w-full h-full;
 
     & > span {
+      @apply px-4 mx-8;
+      background-color: color(surface);
       top: 50%;
       transform: translateY(-50%);
       transform-origin: left top;
-    }
-
-    &::after {
-      @apply overlay overlay-in-surface w-full h-full;
     }
   }
 }
