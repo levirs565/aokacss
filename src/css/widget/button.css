@@ -32,7 +32,6 @@
     @apply h-36 min-w-64 my-8;
     @apply inline-flex flex-row justify-center items-center relative;
     @apply rounded-4;
-    @apply font-roboto font-medium uppercase text-sm;
   }
 
   &.type-raised,

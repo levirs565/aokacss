@@ -1,45 +1,52 @@
-.heading {
-  &-1,
-  &-2 {
-    @apply font-roboto font-light;
-  }
+.heading-1,
+.heading-2,
+.article h1 {
+  @apply font-roboto font-light;
+}
 
-  &-1 {
-    font-size: toRem(96);
-    letter-spacing: letterSpace(-1.5);
-  }
+.heading-1 {
+  font-size: toRem(96);
+  letter-spacing: letterSpace(-1.5);
+}
 
-  &-2 {
-    font-size: toRem(60);
-    letter-spacing: letterSpace(-0.5);
-  }
+.heading-2,
+.article h1 {
+  font-size: toRem(60);
+  letter-spacing: letterSpace(-0.5);
+}
 
-  &-3,
-  &-4,
-  &-5 {
-    @apply font-roboto font-normal;
-  }
+.heading-3,
+.heading-4,
+.heading-5,
+.article h2,
+.article h3,
+.article h4 {
+  @apply font-roboto font-normal;
+}
 
-  &-3 {
-    font-size: toRem(48);
-    letter-spacing: 0;
-  }
+.heading-3,
+.article h2 {
+  font-size: toRem(48);
+  letter-spacing: 0;
+}
 
-  &-4 {
-    font-size: toRem(34);
-    letter-spacing: letterSpace(0.25);
-  }
+.heading-4,
+.article h3 {
+  font-size: toRem(34);
+  letter-spacing: letterSpace(0.25);
+}
 
-  &-5 {
-    font-size: toRem(24);
-    letter-spacing: 0;
-  }
+.heading-5,
+.article h4 {
+  font-size: toRem(24);
+  letter-spacing: 0;
+}
 
-  &-6 {
-    @apply font-roboto font-medium;
-    font-size: toRem(20);
-    letter-spacing: letterSpace(0.15);
-  }
+.heading-6,
+.article h5 {
+  @apply font-roboto font-medium;
+  font-size: toRem(20);
+  letter-spacing: letterSpace(0.15);
 }
 
 .sub {
@@ -94,4 +101,11 @@
   @apply font-roboto font-medium uppercase;
   font-size: toRem(10);
   letter-spacing: letterSpace(1.5);
+}
+
+.quote,
+.article blockquote {
+  @apply mx-0;
+  padding-left: 1.25rem;
+  border-left: solid color(in-background-low) 4px;
 }
