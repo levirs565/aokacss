@@ -136,10 +136,9 @@
     }
   }
 
-  $themes: config(color-themes);
-  @if $themes == null {
+  @if $color-themes == null {
   } @else {
-    @each $theme in $themes {
+    @each $theme in $color-themes {
       &.type-raised.theme-$(theme),
       &.type-unelevated.theme-$(theme) {
         background-color: color($(theme));

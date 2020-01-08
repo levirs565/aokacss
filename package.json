@@ -14,13 +14,12 @@
   "dependencies": {
     "parse-color": "^1.0.0",
     "postcss": "^7.0.24",
+    "postcss-advanced-variables": "^3.0.0",
+    "postcss-functions": "^3.0.0",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
-    "tailwindcss": "^1.1.4",
-    "postcss-advanced-variables": "^3.0.0",
-    "postcss-each": "^0.10.0",
-    "postcss-functions": "^3.0.0",
-    "postcss-scss": "^2.0.0"
+    "postcss-scss": "^2.0.0",
+    "tailwindcss": "^1.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",

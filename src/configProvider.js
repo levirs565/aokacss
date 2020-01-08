@@ -26,10 +26,11 @@ module.exports = opts => {
     syntax: require('postcss-scss'),
     plugins: [
       require('postcss-import'),
-      require('postcss-functions')({
-        functions: require('./util/css-config-function')(nonThemeColors)
+      require('postcss-advanced-variables')({
+        variables: {
+          'color-themes': nonThemeColors.length == 0 ? 'null' : nonThemeColors
+        }
       }),
-      require('postcss-advanced-variables'),
       require('tailwindcss')(tailwindConfig),
       require('postcss-functions')({
         functions: require('./util/css-function')
