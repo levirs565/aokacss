@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.2.0
+
+- Removing TailwindCSS Reset
+- Changing container breakpoint
+- Reimplement text field with outlined version
+- Changing Tab syntax
+- Add data table widget
+- Add article and blockquote class
+- Small performance optimization
+
 ## v0.1.1
 
 - Remove `yarn.lock` from npm.
